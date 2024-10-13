@@ -4,7 +4,7 @@
 #--------------------------------------------------------------------
 # https://grafana.com/grafana/download
 GRAFANA_VERSION="10.4.2"
-PROMETHEUS_URL="http://31.220.76.131:9090"
+PROMETHEUS_URL="http://ip prometheus:9090"
 
 
 apt-get install -y apt-transport-https software-properties-common wget
