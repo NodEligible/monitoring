@@ -1,8 +1,6 @@
 #!/bin/bash
 #--------------------------------------------------------------------
 # Script to Install Grafana Server on Linux Ubuntu (22.04, 24.04)
-# Include Prometheus DataSource Configuration
-# Developed by Denis Astahov in 2024
 #--------------------------------------------------------------------
 # https://grafana.com/grafana/download
 GRAFANA_VERSION="10.4.2"
