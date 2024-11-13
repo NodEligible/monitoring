@@ -4,7 +4,7 @@
 #--------------------------------------------------------------------
 # https://grafana.com/grafana/download
 GRAFANA_VERSION="10.4.2"
-read -p "Enter the Prometheus IP address (e.g., 84.247.166.170): " PROMETHEUS_IP
+read -p "Введите ip адрес вашего сервера: " PROMETHEUS_IP
 PROMETHEUS_URL="http://${PROMETHEUS_IP}:9090"
 
 
