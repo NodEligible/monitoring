@@ -1,8 +1,12 @@
 #!/bin/bash
-#--------------------------------------------------------------------
-# Script to Install Grafana Server on Linux Ubuntu (22.04, 24.04)
-#--------------------------------------------------------------------
-# https://grafana.com/grafana/download
+
+curl -s https://raw.githubusercontent.com/NodEligible/programs/refs/heads/main/display_logo.sh | bash
+
+YELLOW='\e[0;33m'
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m'
+
 GRAFANA_VERSION="10.4.2"
 read -p "Введите ip адрес вашего сервера: " PROMETHEUS_IP
 PROMETHEUS_URL="http://${PROMETHEUS_IP}:9090"
