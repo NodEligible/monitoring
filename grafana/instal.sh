@@ -4,7 +4,8 @@
 #--------------------------------------------------------------------
 # https://grafana.com/grafana/download
 GRAFANA_VERSION="10.4.2"
-PROMETHEUS_URL="http://84.247.166.170:9090"
+read -p "Enter the Prometheus IP address (e.g., 84.247.166.170): " PROMETHEUS_IP
+PROMETHEUS_URL="http://${PROMETHEUS_IP}:9090"
 
 
 apt-get install -y apt-transport-https software-properties-common wget
