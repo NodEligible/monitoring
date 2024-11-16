@@ -9,7 +9,7 @@ NC='\033[0m'
 
 GRAFANA_VERSION="10.4.2"
 read -p "Введите ip адрес вашего сервера: " PROMETHEUS_IP
-PROMETHEUS_URL="http://${PROMETHEUS_IP}:9090"
+PROMETHEUS_URL="http://${PROMETHEUS_IP}:19980"
 
 
 apt-get install -y apt-transport-https software-properties-common wget
