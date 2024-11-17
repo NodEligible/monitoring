@@ -79,7 +79,10 @@ mkdir -p /etc/apt/keyrings/
 wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
 echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
 sudo apt-get update
-sudo apt-get install -y grafana
+apt-get install -y adduser libfontconfig1 musl
+
+wget https://dl.grafana.com/oss/release/grafana_10.4.2_amd64.deb
+dpkg -i grafana_10.4.2_amd64.deb
 
 mkdir -p /etc/grafana/provisioning/datasources/
 cat <<EOF > /etc/grafana/provisioning/datasources/prometheus.yaml
@@ -112,6 +115,7 @@ curl -o /etc/grafana/dashboards/dashboard.json https://raw.githubusercontent.com
 sudo systemctl daemon-reload
 sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
+rm -rf grafana_10.4.2_amd64.deb
 
 systemctl status grafana-server
 
