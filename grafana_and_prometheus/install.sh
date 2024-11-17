@@ -6,6 +6,8 @@
 # Версія Grafana
 GRAFANA_VERSION="10.4.2"
 
+sudo ufw allow 19970/tcp
+
 # Автоматичне отримання IP-адреси сервера
 PROMETHEUS_IP=$(hostname -I | awk '{print $1}')
 PROMETHEUS_URL="http://${PROMETHEUS_IP}:19980"
