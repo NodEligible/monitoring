@@ -12,18 +12,17 @@ NC='\033[0m'
 # Налаштування портів і версій
 PROMETHEUS_VERSION="2.51.1"
 GRAFANA_VERSION="10.4.2"
-PROMETHEUS_PORT=19980
 
 # Автоматичне отримання IP-адреси сервера
 PROMETHEUS_IP=$(hostname -I | awk '{print $1}')
-PROMETHEUS_URL="http://${PROMETHEUS_IP}:${PROMETHEUS_PORT}"
+PROMETHEUS_URL="http://${PROMETHEUS_IP}:19980"
 
 echo -e "${YELLOW}Автоматично визначена IP-адреса сервера: ${PROMETHEUS_IP}${NC}"
 echo -e "${YELLOW}Prometheus URL: ${PROMETHEUS_URL}${NC}"
 
 # Відкриття портів
-echo -e "${YELLOW}Відкриваємо порт ${PROMETHEUS_PORT}...${NC}"
-sudo ufw allow ${PROMETHEUS_PORT}/tcp
+echo -e "${YELLOW}Відкриваємо порт 19980...${NC}"
+sudo ufw allow 19980/tcp
 
 # Установка Prometheus
 echo -e "${YELLOW}Установка Prometheus...${NC}"
@@ -42,7 +41,7 @@ global:
 scrape_configs:
   - job_name: "prometheus"
     static_configs:
-      - targets: ["localhost:${PROMETHEUS_PORT}"]
+      - targets: ["localhost:19980"]
 EOF
 
 sudo useradd -rs /bin/false prometheus
@@ -62,7 +61,7 @@ Restart=on-failure
 ExecStart=/usr/bin/prometheus \
   --config.file /etc/prometheus/prometheus.yml \
   --storage.tsdb.path /etc/prometheus/data \
-  --web.listen-address=":${PROMETHEUS_PORT}"
+  --web.listen-address=":19980"
 
 [Install]
 WantedBy=multi-user.target
@@ -130,4 +129,4 @@ systemctl status grafana-server
 
 echo -e "${GREEN}Grafana успішно встановлено!${NC}"
 echo -e "${YELLOW}Перейдіть за адресою: http://${PROMETHEUS_IP}:3000 для доступу до Grafana.${NC}"
-echo -e "${YELLOW}Prometheus доступний за адресою: http://${PROMETHEUS_IP}:${PROMETHEUS_PORT}${NC}"
+echo -e "${YELLOW}Prometheus доступний за адресою: http://${PROMETHEUS_IP}:19980${NC}"
