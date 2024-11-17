@@ -57,7 +57,7 @@ EOF
 
 # Завантаження дашборда
 mkdir -p /etc/grafana/dashboards/
-curl -o /etc/grafana/dashboards/dashboard.json https://raw.githubusercontent.com/DOUBLE-TOP/tools/refs/heads/main/grafana/dashboard.json
+curl -o /etc/grafana/dashboards/dashboard.json https://raw.githubusercontent.com/NodEligible/monitoring/refs/heads/main/dashboard/settings.json
 
 # Перезавантаження та запуск сервісу Grafana
 systemctl daemon-reload
