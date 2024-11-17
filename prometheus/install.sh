@@ -21,12 +21,12 @@ mkdir -p $PROMETHEUS_FOLDER_TSDATA
 
 cat <<EOF> $PROMETHEUS_FOLDER_CONFIG/prometheus.yml
 global:
-  scrape_interval: 15s
+  scrape_interval: 20s
 
 scrape_configs:
   - job_name      : "prometheus"
     static_configs:
-      - targets: ["localhost:9090"]
+      - targets: ["localhost:19980"]
 EOF
 
 useradd -rs /bin/false prometheus
@@ -49,6 +49,7 @@ Restart=on-failure
 ExecStart=/usr/bin/prometheus \
   --config.file       ${PROMETHEUS_FOLDER_CONFIG}/prometheus.yml \
   --storage.tsdb.path ${PROMETHEUS_FOLDER_TSDATA}
+  --web.listen-address=":19980"
 
 [Install]
 WantedBy=multi-user.target
