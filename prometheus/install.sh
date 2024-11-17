@@ -3,6 +3,7 @@
 # Script to Install Prometheus Server on Linux Ubuntu
 # Tested on Ubuntu 22.04, 24.04
 #--------------------------------------------------------------------
+sudo ufw allow 19980/tcp
 PROMETHEUS_VERSION="2.51.1"
 PROMETHEUS_FOLDER_CONFIG="/etc/prometheus"
 PROMETHEUS_FOLDER_TSDATA="/etc/prometheus/data"
@@ -48,7 +49,8 @@ Type=simple
 Restart=on-failure
 ExecStart=/usr/bin/prometheus \
   --config.file       ${PROMETHEUS_FOLDER_CONFIG}/prometheus.yml \
-  --storage.tsdb.path ${PROMETHEUS_FOLDER_TSDATA}
+  --storage.tsdb.path ${PROMETHEUS_FOLDER_TSDATA} \
+  --web.listen-address=":19980"
 
 [Install]
 WantedBy=multi-user.target
