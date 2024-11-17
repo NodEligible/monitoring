@@ -74,4 +74,4 @@ echo -e "${GREEN}Prometheus установлен!${NC}"
 
 echo -e "${YELLOW}Установка Grafana...${NC}"
 
-curl -s https://raw.githubusercontent.com/NodEligible/test-gaides/refs/heads/main/grafana_test/install.sh | bash
+bash <(curl -s https://raw.githubusercontent.com/NodEligible/test-gaides/refs/heads/main/grafana_test/install.sh)
