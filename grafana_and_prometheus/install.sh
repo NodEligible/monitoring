@@ -85,15 +85,13 @@ PROMETHEUS_URL="http://${PROMETHEUS_IP}:19980"
 echo "Автоматически определен IP-адрес сервера: $PROMETHEUS_IP"
 echo "Prometheus URL: $PROMETHEUS_URL"
 
-# Установление необходимых зависимостей
-apt-get install -y apt-transport-https software-properties-common wget curl
+apt-get install -y apt-transport-https software-properties-common wget
 mkdir -p /etc/apt/keyrings/
 wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
 echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
 apt-get update
 apt-get install -y adduser libfontconfig1 musl
 
-# Загрузка и установка Grafana
 wget https://dl.grafana.com/oss/release/grafana_${GRAFANA_VERSION}_amd64.deb
 dpkg -i grafana_${GRAFANA_VERSION}_amd64.deb
 
@@ -101,7 +99,6 @@ dpkg -i grafana_${GRAFANA_VERSION}_amd64.deb
 echo "export PATH=/usr/share/grafana/bin:\$PATH" >> /etc/profile
 
 # Настройка источника данных Prometheus
-mkdir -p /etc/grafana/provisioning/datasources/
 cat <<EOF > /etc/grafana/provisioning/datasources/prometheus.yaml
 apiVersion: 1
 
