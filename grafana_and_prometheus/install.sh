@@ -128,8 +128,6 @@ EOF
 mkdir -p /etc/grafana/dashboards/
 curl -o /etc/grafana/dashboards/dashboard.json https://raw.githubusercontent.com/NodEligible/monitoring/refs/heads/main/dashboard/settings.json
 
-sudo sed -i 's/^http_port = 3000/http_port = 19970/' /etc/grafana/grafana.ini
-
 # Перезагрузка и запуск Grafana
 systemctl daemon-reload
 systemctl enable grafana-server
@@ -139,6 +137,6 @@ systemctl start grafana-server
 systemctl status grafana-server
 
 echo -e "${GREEN}Grafana установлена ​​с дашбордом!${NC}"
-echo -e "${YELLOW}Перейдите к Grafana, чтобы проверить дашборд по адресу: http://${PROMETHEUS_IP}:19970${NC}"
+echo -e "${YELLOW}Перейдите к Grafana, чтобы проверить дашборд по адресу: http://${PROMETHEUS_IP}:3000${NC}"
 echo -e "${YELLOW}Перейдите к Prometheus, чтобы проверить дашборд по адресу: http://${PROMETHEUS_IP}:19980${NC}"
 
