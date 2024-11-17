@@ -49,7 +49,6 @@ Restart=on-failure
 ExecStart=/usr/bin/prometheus \
   --config.file       ${PROMETHEUS_FOLDER_CONFIG}/prometheus.yml \
   --storage.tsdb.path ${PROMETHEUS_FOLDER_TSDATA}
-  --web.listen-address=":19980"
 
 [Install]
 WantedBy=multi-user.target
