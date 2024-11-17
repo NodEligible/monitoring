@@ -129,5 +129,5 @@ sudo systemctl start grafana-server
 systemctl status grafana-server
 
 echo -e "${GREEN}Grafana успішно встановлено!${NC}"
-echo -e "${YELLOW}Перейдіть за адресою: http://${PROMETHEUS_IP}:${GRAFANA_PORT} для доступу до Grafana.${NC}"
+echo -e "${YELLOW}Перейдіть за адресою: http://${PROMETHEUS_IP}:3000 для доступу до Grafana.${NC}"
 echo -e "${YELLOW}Prometheus доступний за адресою: http://${PROMETHEUS_IP}:${PROMETHEUS_PORT}${NC}"
