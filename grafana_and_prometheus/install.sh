@@ -68,4 +68,4 @@ systemctl start grafana-server
 systemctl status grafana-server
 
 echo "Grafana встановлено з дашбордом!"
-echo "Перейдіть до Grafana, щоб перевірити дашборд за адресою: http://<ваша-IP>:3000"
+echo "Перейдіть до Grafana, щоб перевірити дашборд за адресою: http://${PROMETHEUS_IP}:3000"
