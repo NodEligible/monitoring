@@ -13,7 +13,6 @@ NC='\033[0m'
 PROMETHEUS_VERSION="2.51.1"
 GRAFANA_VERSION="10.4.2"
 PROMETHEUS_PORT=19980
-GRAFANA_PORT=19970
 
 # Автоматичне отримання IP-адреси сервера
 PROMETHEUS_IP=$(hostname -I | awk '{print $1}')
@@ -25,8 +24,6 @@ echo -e "${YELLOW}Prometheus URL: ${PROMETHEUS_URL}${NC}"
 # Відкриття портів
 echo -e "${YELLOW}Відкриваємо порт ${PROMETHEUS_PORT}...${NC}"
 sudo ufw allow ${PROMETHEUS_PORT}/tcp
-echo -e "${YELLOW}Відкриваємо порт ${GRAFANA_PORT}...${NC}"
-sudo ufw allow ${GRAFANA_PORT}/tcp
 
 # Установка Prometheus
 echo -e "${YELLOW}Установка Prometheus...${NC}"
@@ -92,8 +89,6 @@ echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stab
 sudo apt-get update
 sudo apt-get install -y grafana
 
-sudo sed -i "s/^http_port = 3000/http_port = ${GRAFANA_PORT}/" /etc/grafana/grafana.ini
-
 # Налаштування джерела даних Prometheus
 mkdir -p /etc/grafana/provisioning/datasources/
 cat <<EOF > /etc/grafana/provisioning/datasources/prometheus.yaml
@@ -131,10 +126,7 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 
 # Перевірка статусу Grafana
-if ! systemctl is-active --quiet grafana-server; then
-  echo -e "${RED}Помилка під час запуску Grafana! Перевірте логи.${NC}"
-  exit 1
-fi
+systemctl status grafana-server
 
 echo -e "${GREEN}Grafana успішно встановлено!${NC}"
 echo -e "${YELLOW}Перейдіть за адресою: http://${PROMETHEUS_IP}:${GRAFANA_PORT} для доступу до Grafana.${NC}"
