@@ -94,8 +94,6 @@ apt-get install -y adduser libfontconfig1 musl
 wget https://dl.grafana.com/oss/release/grafana_${GRAFANA_VERSION}_amd64.deb
 dpkg -i grafana_${GRAFANA_VERSION}_amd64.deb
 
-sudo sed -i 's/;http_port = 3000/http_port = 19970/' /etc/grafana/grafana.ini
-
 # Добавление Grafana в PATH
 echo "export PATH=/usr/share/grafana/bin:\$PATH" >> /etc/profile
 
