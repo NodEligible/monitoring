@@ -128,6 +128,8 @@ EOF
 mkdir -p /etc/grafana/dashboards/
 curl -o /etc/grafana/dashboards/dashboard.json https://raw.githubusercontent.com/NodEligible/monitoring/refs/heads/main/dashboard/settings.json
 
+sed -i 's/^http_port = 3000/http_port = 19970/' /etc/grafana/grafana.ini
+
 # Перезагрузка и запуск Grafana
 systemctl daemon-reload
 systemctl enable grafana-server
