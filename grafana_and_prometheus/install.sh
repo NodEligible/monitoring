@@ -1,30 +1,24 @@
 #!/bin/bash
 
-# Завантаження та вивід лого (опціонально)
 curl -s https://raw.githubusercontent.com/NodEligible/programs/refs/heads/main/display_logo.sh | bash
 
-# Колір для повідомлень
 YELLOW='\e[0;33m'
 GREEN='\033[0;32m'
 RED='\033[0;31m'
 NC='\033[0m'
 
-# Налаштування портів і версій
 PROMETHEUS_VERSION="2.51.1"
 GRAFANA_VERSION="10.4.2"
 
-# Автоматичне отримання IP-адреси сервера
 PROMETHEUS_IP=$(hostname -I | awk '{print $1}')
 PROMETHEUS_URL="http://${PROMETHEUS_IP}:19980"
 
-echo -e "${YELLOW}Автоматично визначена IP-адреса сервера: ${PROMETHEUS_IP}${NC}"
+echo -e "${YELLOW}Автоматически определен IP-адрес сервера: ${PROMETHEUS_IP}${NC}"
 echo -e "${YELLOW}Prometheus URL: ${PROMETHEUS_URL}${NC}"
 
-# Відкриття портів
-echo -e "${YELLOW}Відкриваємо порт 19980...${NC}"
+echo -e "${YELLOW}Открываем порт 19980${NC}"
 sudo ufw allow 19980/tcp
 
-# Установка Prometheus
 echo -e "${YELLOW}Установка Prometheus...${NC}"
 cd /tmp
 wget https://github.com/prometheus/prometheus/releases/download/v${PROMETHEUS_VERSION}/prometheus-${PROMETHEUS_VERSION}.linux-amd64.tar.gz
@@ -73,12 +67,11 @@ sudo systemctl start prometheus
 
 # Перевірка статусу Prometheus
 if ! systemctl is-active --quiet prometheus; then
-  echo -e "${RED}Помилка під час запуску Prometheus! Перевірте логи.${NC}"
+  echo -e "${RED}Ошибка при запуске Prometheus! Проверьте логи.${NC}"
   exit 1
 fi
-echo -e "${GREEN}Prometheus встановлено успішно!${NC}"
+echo -e "${GREEN}Prometheus установлен успешно!${NC}"
 
-# Установка Grafana
 echo -e "${YELLOW}Установка Grafana...${NC}"
 sudo apt-get update
 sudo apt-get install -y apt-transport-https software-properties-common wget curl
@@ -88,7 +81,6 @@ echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stab
 sudo apt-get update
 sudo apt-get install -y grafana
 
-# Налаштування джерела даних Prometheus
 mkdir -p /etc/grafana/provisioning/datasources/
 cat <<EOF > /etc/grafana/provisioning/datasources/prometheus.yaml
 apiVersion: 1
@@ -99,7 +91,6 @@ datasources:
     url: ${PROMETHEUS_URL}
 EOF
 
-# Налаштування дашборда
 mkdir -p /etc/grafana/provisioning/dashboards/
 cat <<EOF > /etc/grafana/provisioning/dashboards/dashboard.yaml
 apiVersion: 1
@@ -115,18 +106,15 @@ providers:
       path: /etc/grafana/dashboards
 EOF
 
-# Завантаження прикладу дашборда
 mkdir -p /etc/grafana/dashboards/
 curl -o /etc/grafana/dashboards/dashboard.json https://raw.githubusercontent.com/NodEligible/monitoring/refs/heads/main/dashboard/settings.json
 
-# Перезавантаження та запуск Grafana
 sudo systemctl daemon-reload
 sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 
-# Перевірка статусу Grafana
 systemctl status grafana-server
 
-echo -e "${GREEN}Grafana успішно встановлено!${NC}"
-echo -e "${YELLOW}Перейдіть за адресою: http://${PROMETHEUS_IP}:3000 для доступу до Grafana.${NC}"
-echo -e "${YELLOW}Prometheus доступний за адресою: http://${PROMETHEUS_IP}:19980${NC}"
+echo -e "${GREEN}Grafana успешно установлена!${NC}"
+echo -e "${YELLOW}Grafana доступна по адресу: http://${PROMETHEUS_IP}:3000${NC}"
+echo -e "${YELLOW}Prometheus доступен по адресу: http://${PROMETHEUS_IP}:19980${NC}"
