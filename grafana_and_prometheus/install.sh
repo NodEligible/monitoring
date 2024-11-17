@@ -75,6 +75,9 @@ echo -e "${GREEN}Prometheus установлен!${NC}"
 
 echo -e "${YELLOW}Установка Grafana...${NC}"
 
+# Версия Grafana
+GRAFANA_VERSION="10.4.2"
+
 # Автоматическое получение IP-адреса сервера
 PROMETHEUS_IP=$(hostname -I | awk '{print $1}')
 PROMETHEUS_URL="http://${PROMETHEUS_IP}:19980"
@@ -128,6 +131,8 @@ EOF
 mkdir -p /etc/grafana/dashboards/
 curl -o /etc/grafana/dashboards/dashboard.json https://raw.githubusercontent.com/NodEligible/monitoring/refs/heads/main/dashboard/settings.json
 
+sed -i 's/^http_port = 3000/http_port = 19970/' /etc/grafana/grafana.ini
+
 # Перезагрузка и запуск Grafana
 systemctl daemon-reload
 systemctl enable grafana-server
@@ -137,6 +142,6 @@ systemctl start grafana-server
 systemctl status grafana-server
 
 echo -e "${GREEN}Grafana установлена ​​с дашбордом!${NC}"
-echo -e "${YELLOW}Перейдите к Grafana, чтобы проверить дашборд по адресу: http://${PROMETHEUS_IP}:3000${NC}"
+echo -e "${YELLOW}Перейдите к Grafana, чтобы проверить дашборд по адресу: http://${PROMETHEUS_IP}:19970${NC}"
 echo -e "${YELLOW}Перейдите к Prometheus, чтобы проверить дашборд по адресу: http://${PROMETHEUS_IP}:19980${NC}"
 
