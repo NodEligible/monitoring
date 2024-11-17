@@ -2,8 +2,12 @@
   "annotations": {
     "list": [
       {
+        "$$hashKey": "object:2875",
         "builtIn": 1,
-        "datasource": "-- Grafana --",
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -12,14 +16,15 @@
       }
     ]
   },
-  "description": "",
+  "description": "【English version】Update 2020.10.10, add the overall resource overview! Support Grafana6&7,Support Node Exporter v0.16 and above.Optimize the main metrics display. Includes: CPU, memory, disk IO, network, temperature and other monitoring metrics。https://github.com/starsliao/Prometheus",
   "editable": true,
+  "fiscalYearStartMonth": 0,
   "gnetId": 11074,
   "graphTooltip": 0,
-  "id": 3,
-  "iteration": 1731194361973,
+  "id": 1,
   "links": [
     {
+      "$$hashKey": "object:2300",
       "icon": "bolt",
       "tags": [],
       "targetBlank": true,
@@ -29,6 +34,7 @@
       "url": "https://grafana.com/grafana/dashboards/11074"
     },
     {
+      "$$hashKey": "object:2301",
       "icon": "question",
       "tags": [],
       "targetBlank": true,
@@ -38,6 +44,7 @@
       "url": "https://github.com/starsliao"
     },
     {
+      "$$hashKey": "object:2302",
       "asDropdown": true,
       "icon": "external link",
       "tags": [],
@@ -49,7 +56,10 @@
   "panels": [
     {
       "collapsed": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -58,29 +68,33 @@
       },
       "id": 187,
       "panels": [],
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "refId": "A"
+        }
+      ],
       "title": "Resource Overview (associated JOB)，Host：$show_hostname，Instance：$node",
       "type": "row"
     },
     {
       "columns": [],
-      "datasource": "Prometheus",
-      "description": "Partition utilization, disk read, disk write, download bandwidth, upload bandwidth, if there are multiple network cards or multiple partitions, it is the value of the network card or partition with the highest utilization rate collected.\n\nCurrEstab: The number of TCP connections whose current status is ESTABLISHED or CLOSE-WAIT.",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
       },
+      "description": "Partition utilization, disk read, disk write, download bandwidth, upload bandwidth, if there are multiple network cards or multiple partitions, it is the value of the network card or partition with the highest utilization rate collected.\n\nCurrEstab: The number of TCP connections whose current status is ESTABLISHED or CLOSE-WAIT.",
       "fontSize": "80%",
       "gridPos": {
-        "h": 7,
+        "h": 16,
         "w": 24,
         "x": 0,
         "y": 1
       },
       "id": 185,
-      "options": {},
-      "pageSize": null,
       "showHeader": true,
       "sort": {
         "col": 31,
@@ -88,9 +102,9 @@
       },
       "styles": [
         {
+          "$$hashKey": "object:1600",
           "alias": "Hostname",
           "align": "auto",
-          "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
@@ -108,9 +122,9 @@
           "unit": "bytes"
         },
         {
+          "$$hashKey": "object:1601",
           "alias": "IP（Link to details）",
           "align": "auto",
-          "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
@@ -129,9 +143,9 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:1602",
           "alias": "Memory",
           "align": "auto",
-          "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
@@ -147,16 +161,15 @@
           "unit": "bytes"
         },
         {
+          "$$hashKey": "object:1603",
           "alias": "CPU Cores",
           "align": "auto",
-          "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": null,
           "mappingType": 1,
           "pattern": "Value #C",
           "thresholds": [],
@@ -164,9 +177,9 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:1604",
           "alias": " Uptime",
           "align": "auto",
-          "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
@@ -181,6 +194,7 @@
           "unit": "s"
         },
         {
+          "$$hashKey": "object:1605",
           "alias": "Partition used%*",
           "align": "auto",
           "colorMode": "cell",
@@ -201,6 +215,7 @@
           "unit": "percent"
         },
         {
+          "$$hashKey": "object:1606",
           "alias": "CPU used%",
           "align": "auto",
           "colorMode": "cell",
@@ -221,6 +236,7 @@
           "unit": "percent"
         },
         {
+          "$$hashKey": "object:1607",
           "alias": "Memory used%",
           "align": "auto",
           "colorMode": "cell",
@@ -241,6 +257,7 @@
           "unit": "percent"
         },
         {
+          "$$hashKey": "object:1608",
           "alias": "Disk read*",
           "align": "auto",
           "colorMode": "cell",
@@ -261,6 +278,7 @@
           "unit": "Bps"
         },
         {
+          "$$hashKey": "object:1609",
           "alias": "Disk write*",
           "align": "auto",
           "colorMode": "cell",
@@ -281,6 +299,7 @@
           "unit": "Bps"
         },
         {
+          "$$hashKey": "object:1610",
           "alias": "Download*",
           "align": "auto",
           "colorMode": "cell",
@@ -301,6 +320,7 @@
           "unit": "bps"
         },
         {
+          "$$hashKey": "object:1611",
           "alias": "Upload*",
           "align": "auto",
           "colorMode": "cell",
@@ -321,9 +341,9 @@
           "unit": "bps"
         },
         {
+          "$$hashKey": "object:1612",
           "alias": "5m load",
           "align": "auto",
-          "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
@@ -338,6 +358,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:1613",
           "alias": "CurrEstab",
           "align": "auto",
           "colorMode": "cell",
@@ -358,6 +379,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:1614",
           "alias": "TCP_tw",
           "align": "center",
           "colorMode": "cell",
@@ -367,7 +389,6 @@
             "rgba(245, 54, 54, 0.9)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": null,
           "mappingType": 1,
           "pattern": "Value #N",
           "thresholds": [
@@ -378,9 +399,9 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:1615",
           "alias": "",
           "align": "right",
-          "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
@@ -395,14 +416,23 @@
       ],
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"} - 0",
           "format": "table",
+          "hide": true,
           "instant": true,
           "interval": "",
           "legendFormat": "主机名",
           "refId": "A"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "sum(time() - node_boot_time_seconds{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"})by(instance)",
           "format": "table",
           "hide": false,
@@ -412,6 +442,10 @@
           "refId": "D"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_memory_MemTotal_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"} - 0",
           "format": "table",
           "hide": false,
@@ -421,6 +455,10 @@
           "refId": "B"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "count(node_cpu_seconds_total{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",mode='system'}) by (instance)",
           "format": "table",
           "hide": false,
@@ -430,6 +468,10 @@
           "refId": "C"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_load5{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}",
           "format": "table",
           "instant": true,
@@ -438,6 +480,10 @@
           "refId": "L"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "(1 - avg(rate(node_cpu_seconds_total{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",mode=\"idle\"}[$interval])) by (instance)) * 100",
           "format": "table",
           "hide": false,
@@ -447,6 +493,10 @@
           "refId": "F"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "(1 - (node_memory_MemAvailable_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"} / (node_memory_MemTotal_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"})))* 100",
           "format": "table",
           "hide": false,
@@ -456,6 +506,10 @@
           "refId": "G"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "max((node_filesystem_size_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",fstype=~\"ext.?|xfs\"}-node_filesystem_free_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",fstype=~\"ext.?|xfs\"}) *100/(node_filesystem_avail_bytes {origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",fstype=~\"ext.?|xfs\"}+(node_filesystem_size_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",fstype=~\"ext.?|xfs\"}-node_filesystem_free_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",fstype=~\"ext.?|xfs\"})))by(instance)",
           "format": "table",
           "hide": false,
@@ -465,6 +519,10 @@
           "refId": "E"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "max(rate(node_disk_read_bytes_total{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}[$interval])) by (instance)",
           "format": "table",
           "hide": false,
@@ -474,6 +532,10 @@
           "refId": "H"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "max(rate(node_disk_written_bytes_total{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}[$interval])) by (instance)",
           "format": "table",
           "hide": false,
@@ -483,24 +545,36 @@
           "refId": "I"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_netstat_Tcp_CurrEstab{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"} - 0",
           "format": "table",
-          "hide": false,
+          "hide": true,
           "instant": true,
           "interval": "",
           "legendFormat": "连接数",
           "refId": "M"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_sockstat_TCP_tw{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"} - 0",
           "format": "table",
-          "hide": false,
+          "hide": true,
           "instant": true,
           "interval": "",
           "legendFormat": "TIME_WAIT",
           "refId": "N"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "max(rate(node_network_receive_bytes_total{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}[$interval])*8) by (instance)",
           "format": "table",
           "hide": false,
@@ -510,6 +584,10 @@
           "refId": "J"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "max(rate(node_network_transmit_bytes_total{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}[$interval])*8) by (instance)",
           "format": "table",
           "hide": false,
@@ -519,11 +597,9 @@
           "refId": "K"
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "Server Resource Overview【JOB：$job，Total：$total】",
       "transform": "table",
-      "type": "table"
+      "type": "table-old"
     },
     {
       "aliasColors": {
@@ -544,12 +620,13 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
-      "decimals": null,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -560,7 +637,7 @@
         "h": 7,
         "w": 8,
         "x": 0,
-        "y": 8
+        "y": 17
       },
       "hiddenSeries": false,
       "id": 191,
@@ -574,7 +651,6 @@
         "min": false,
         "rightSide": false,
         "show": true,
-        "sideWidth": null,
         "sort": "current",
         "sortDesc": true,
         "total": false,
@@ -582,21 +658,19 @@
       },
       "lines": true,
       "linewidth": 2,
-      "links": [],
       "maxPerRow": 6,
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true,
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.0",
+      "pluginVersion": "10.4.2",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
-      "repeat": null,
       "seriesOverrides": [
         {
+          "$$hashKey": "object:2312",
           "alias": "Overall average used%",
           "lines": false,
           "pointradius": 1,
@@ -604,6 +678,7 @@
           "yaxis": 2
         },
         {
+          "$$hashKey": "object:2313",
           "alias": "CPU Cores",
           "color": "#C4162A"
         }
@@ -613,6 +688,10 @@
       "steppedLine": false,
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "count(node_cpu_seconds_total{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\", mode='system'})",
           "format": "time_series",
           "hide": false,
@@ -624,6 +703,10 @@
           "step": 240
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "sum(node_load5{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"})",
           "format": "time_series",
           "hide": false,
@@ -634,6 +717,10 @@
           "step": 240
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "avg(1 - avg(rate(node_cpu_seconds_total{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",mode=\"idle\"}[$interval])) by (instance)) * 100",
           "format": "time_series",
           "hide": false,
@@ -645,9 +732,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "$job：Overall total 5m load & average CPU used%",
       "tooltip": {
         "shared": true,
@@ -656,35 +741,29 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
-          "decimals": null,
+          "$$hashKey": "object:8791",
           "format": "short",
           "label": "Total 5m load",
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
+          "$$hashKey": "object:8792",
           "decimals": 0,
           "format": "percent",
           "label": "Overall average used%",
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
@@ -701,11 +780,13 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "decimals": 1,
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -716,7 +797,7 @@
         "h": 7,
         "w": 8,
         "x": 8,
-        "y": 8
+        "y": 17
       },
       "height": "300",
       "hiddenSeries": false,
@@ -736,24 +817,24 @@
       },
       "lines": true,
       "linewidth": 2,
-      "links": [],
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true,
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.0",
+      "pluginVersion": "10.4.2",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:2494",
           "alias": "Total",
           "color": "#C4162A",
           "fill": 0
         },
         {
+          "$$hashKey": "object:2495",
           "alias": "Overall Average Used%",
           "lines": false,
           "pointradius": 1,
@@ -766,6 +847,10 @@
       "steppedLine": false,
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "sum(node_memory_MemTotal_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"})",
           "format": "time_series",
           "hide": false,
@@ -777,6 +862,10 @@
           "step": 4
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "sum(node_memory_MemTotal_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"} - node_memory_MemAvailable_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"})",
           "format": "time_series",
           "hide": false,
@@ -787,6 +876,10 @@
           "step": 4
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "(sum(node_memory_MemTotal_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"} - node_memory_MemAvailable_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}) / sum(node_memory_MemTotal_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}))*100",
           "format": "time_series",
           "hide": false,
@@ -797,9 +890,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "$job：Overall total memory & average memory used%",
       "tooltip": {
         "shared": true,
@@ -808,35 +899,29 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
-          "decimals": null,
+          "$$hashKey": "object:8938",
           "format": "bytes",
           "label": "Total",
           "logBase": 1,
-          "max": null,
           "min": "0",
           "show": true
         },
         {
-          "decimals": null,
+          "$$hashKey": "object:8939",
           "format": "percent",
           "label": "Overall Average Used%",
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
@@ -844,12 +929,14 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "decimals": 1,
       "description": "",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -860,7 +947,7 @@
         "h": 7,
         "w": 8,
         "x": 16,
-        "y": 8
+        "y": 17
       },
       "hiddenSeries": false,
       "id": 197,
@@ -874,7 +961,6 @@
         "min": false,
         "rightSide": false,
         "show": true,
-        "sideWidth": null,
         "sort": "current",
         "sortDesc": true,
         "total": false,
@@ -882,19 +968,18 @@
       },
       "lines": true,
       "linewidth": 2,
-      "links": [],
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true,
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.0",
+      "pluginVersion": "10.4.2",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:2617",
           "alias": "Overall Average Used%",
           "lines": false,
           "pointradius": 1,
@@ -902,6 +987,7 @@
           "yaxis": 2
         },
         {
+          "$$hashKey": "object:2618",
           "alias": "Total",
           "color": "#C4162A"
         }
@@ -911,6 +997,10 @@
       "steppedLine": false,
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "sum(avg(node_filesystem_size_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",fstype=~\"xfs|ext.*\"})by(device,instance))",
           "format": "time_series",
           "instant": false,
@@ -920,6 +1010,10 @@
           "refId": "E"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "sum(avg(node_filesystem_size_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",fstype=~\"xfs|ext.*\"})by(device,instance)) - sum(avg(node_filesystem_free_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",fstype=~\"xfs|ext.*\"})by(device,instance))",
           "format": "time_series",
           "instant": false,
@@ -929,6 +1023,10 @@
           "refId": "C"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "(sum(avg(node_filesystem_size_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",fstype=~\"xfs|ext.*\"})by(device,instance)) - sum(avg(node_filesystem_free_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",fstype=~\"xfs|ext.*\"})by(device,instance))) *100/(sum(avg(node_filesystem_avail_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",fstype=~\"xfs|ext.*\"})by(device,instance))+(sum(avg(node_filesystem_size_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",fstype=~\"xfs|ext.*\"})by(device,instance)) - sum(avg(node_filesystem_free_bytes{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",fstype=~\"xfs|ext.*\"})by(device,instance))))",
           "format": "time_series",
           "instant": false,
@@ -939,9 +1037,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "$job：Overall total disk & average disk used%",
       "tooltip": {
         "shared": true,
@@ -950,69 +1046,164 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
+          "$$hashKey": "object:8990",
           "decimals": 1,
           "format": "bytes",
           "label": "Total",
           "logBase": 1,
-          "max": null,
           "min": "0",
           "show": true
         },
         {
-          "decimals": null,
+          "$$hashKey": "object:8991",
           "format": "percent",
           "label": "Overall Average Used%",
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
       "collapsed": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 15
+        "y": 24
       },
       "id": 189,
       "panels": [],
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "refId": "A"
+        }
+      ],
       "title": "Resource Details：【$show_hostname】",
       "type": "row"
     },
     {
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(245, 54, 54, 0.9)",
+                "value": null
+              },
+              {
+                "color": "rgba(237, 129, 40, 0.89)",
+                "value": 1
+              },
+              {
+                "color": "rgba(50, 172, 45, 0.97)",
+                "value": 3
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 0,
+        "y": 25
+      },
+      "hideTimeOverride": true,
+      "id": 15,
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.4.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "avg(time() - node_boot_time_seconds{instance=~\"$node\"})",
+          "format": "time_series",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A",
+          "step": 40
+        }
+      ],
+      "title": "Uptime",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "decimals": 1,
           "mappings": [
             {
-              "from": "",
-              "id": 1,
-              "operator": "",
-              "text": "N/A",
-              "to": "",
-              "type": 1,
-              "value": "0"
+              "options": {
+                "0": {
+                  "text": "N/A"
+                }
+              },
+              "type": "value"
             }
           ],
           "max": 100,
@@ -1040,35 +1231,17 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 7,
-        "x": 0,
-        "y": 16
+        "w": 3,
+        "x": 2,
+        "y": 25
       },
       "id": 177,
       "options": {
         "displayMode": "lcd",
-        "fieldOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "defaults": {
-            "mappings": [],
-            "max": 100,
-            "min": 0,
-            "thresholds": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "override": {},
-          "values": false
-        },
+        "maxVizHeight": 300,
+        "minVizHeight": 16,
+        "minVizWidth": 8,
+        "namePlacement": "auto",
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
@@ -1077,11 +1250,17 @@
           "fields": "",
           "values": false
         },
-        "showUnfilled": true
+        "showUnfilled": true,
+        "sizing": "auto",
+        "valueMode": "color"
       },
-      "pluginVersion": "6.4.3",
+      "pluginVersion": "10.4.2",
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "100 - (avg(rate(node_cpu_seconds_total{instance=~\"$node\",mode=\"idle\"}[$interval])) * 100)",
           "instant": true,
           "interval": "",
@@ -1089,6 +1268,10 @@
           "refId": "A"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "avg(rate(node_cpu_seconds_total{instance=~\"$node\",mode=\"iowait\"}[$interval])) * 100",
           "hide": true,
           "instant": true,
@@ -1097,6 +1280,10 @@
           "refId": "C"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "(1 - (node_memory_MemAvailable_bytes{instance=~\"$node\"} / (node_memory_MemTotal_bytes{instance=~\"$node\"})))* 100",
           "instant": true,
           "interval": "",
@@ -1104,6 +1291,10 @@
           "refId": "B"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "(node_filesystem_size_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint=\"$maxmount\"}-node_filesystem_free_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint=\"$maxmount\"})*100 /(node_filesystem_avail_bytes {instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint=\"$maxmount\"}+(node_filesystem_size_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint=\"$maxmount\"}-node_filesystem_free_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint=\"$maxmount\"}))",
           "hide": false,
           "instant": true,
@@ -1112,6 +1303,10 @@
           "refId": "D"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "(1 - ((node_memory_SwapFree_bytes{instance=~\"$node\"} + 1)/ (node_memory_SwapTotal_bytes{instance=~\"$node\"} + 1))) * 100",
           "instant": true,
           "interval": "",
@@ -1119,28 +1314,21 @@
           "refId": "F"
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "",
-      "transformations": [],
       "type": "bargauge"
     },
     {
       "columns": [],
-      "datasource": "Prometheus",
-      "description": "In this kanban: the total disk, usage, available, and usage rate are consistent with the values of the Size, Used, Avail, and Use% columns of the df command, and the value of Use% will be rounded to one decimal place, which will be more accurate .\n\nNote: The Use% algorithm in df is: (size-free) * 100 / (avail + (size-free)), the result is divisible by this value, non-divisible by this value is +1, and the unit of the result is %.\nRefer to the df command source code:",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
       },
+      "description": "In this kanban: the total disk, usage, available, and usage rate are consistent with the values of the Size, Used, Avail, and Use% columns of the df command, and the value of Use% will be rounded to one decimal place, which will be more accurate .\n\nNote: The Use% algorithm in df is: (size-free) * 100 / (avail + (size-free)), the result is divisible by this value, non-divisible by this value is +1, and the unit of the result is %.\nRefer to the df command source code:",
       "fontSize": "80%",
       "gridPos": {
         "h": 6,
         "w": 10,
-        "x": 7,
-        "y": 16
+        "x": 5,
+        "y": 25
       },
       "id": 181,
       "links": [
@@ -1150,8 +1338,6 @@
           "url": "https://github.com/coreutils/coreutils/blob/master/src/df.c"
         }
       ],
-      "options": {},
-      "pageSize": null,
       "scroll": true,
       "showHeader": true,
       "sort": {
@@ -1160,9 +1346,9 @@
       },
       "styles": [
         {
+          "$$hashKey": "object:307",
           "alias": "Mounted on",
           "align": "auto",
-          "colorMode": null,
           "colors": [
             "rgba(50, 172, 45, 0.97)",
             "rgba(237, 129, 40, 0.89)",
@@ -1179,6 +1365,7 @@
           "unit": "bytes"
         },
         {
+          "$$hashKey": "object:308",
           "alias": "Avail",
           "align": "auto",
           "colorMode": "value",
@@ -1199,6 +1386,7 @@
           "unit": "bytes"
         },
         {
+          "$$hashKey": "object:309",
           "alias": "Used",
           "align": "auto",
           "colorMode": "cell",
@@ -1219,9 +1407,9 @@
           "unit": "percent"
         },
         {
+          "$$hashKey": "object:310",
           "alias": "Size",
           "align": "auto",
-          "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
@@ -1237,9 +1425,9 @@
           "unit": "bytes"
         },
         {
+          "$$hashKey": "object:311",
           "alias": "Filesystem",
           "align": "auto",
-          "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
@@ -1255,9 +1443,9 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:312",
           "alias": "Device",
           "align": "auto",
-          "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
@@ -1275,9 +1463,9 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:313",
           "alias": "",
           "align": "auto",
-          "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
@@ -1294,6 +1482,10 @@
       ],
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_filesystem_size_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint !~\".*pod.*\"}-0",
           "format": "table",
           "hide": false,
@@ -1304,6 +1496,10 @@
           "refId": "C"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_filesystem_avail_bytes {instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint !~\".*pod.*\"}-0",
           "format": "table",
           "hide": false,
@@ -1314,6 +1510,10 @@
           "refId": "A"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "(node_filesystem_size_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint !~\".*pod.*\"}-node_filesystem_free_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint !~\".*pod.*\"}) *100/(node_filesystem_avail_bytes {instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint !~\".*pod.*\"}+(node_filesystem_size_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint !~\".*pod.*\"}-node_filesystem_free_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint !~\".*pod.*\"}))",
           "format": "table",
           "hide": false,
@@ -1326,7 +1526,95 @@
       ],
       "title": "【$show_hostname】：Disk Space Used Basic(EXT?/XFS)",
       "transform": "table",
-      "type": "table"
+      "type": "table-old"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 2,
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(50, 172, 45, 0.97)",
+                "value": null
+              },
+              {
+                "color": "rgba(237, 129, 40, 0.89)",
+                "value": 20
+              },
+              {
+                "color": "#d44a3a",
+                "value": 50
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 15,
+        "y": 25
+      },
+      "id": 20,
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.4.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "avg(rate(node_cpu_seconds_total{instance=~\"$node\",mode=\"iowait\"}[$interval])) * 100",
+          "format": "time_series",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A",
+          "step": 20
+        }
+      ],
+      "title": "CPU iowait",
+      "type": "stat"
     },
     {
       "aliasColors": {
@@ -1340,12 +1628,14 @@
       "bars": true,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "editable": true,
       "error": false,
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1357,7 +1647,7 @@
         "h": 6,
         "w": 7,
         "x": 17,
-        "y": 16
+        "y": 25
       },
       "hiddenSeries": false,
       "id": 183,
@@ -1377,20 +1667,18 @@
       },
       "lines": false,
       "linewidth": 2,
-      "links": [],
       "nullPointMode": "null as zero",
       "options": {
-        "alertThreshold": true,
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.0",
+      "pluginVersion": "10.4.2",
       "pointradius": 1,
       "points": false,
       "renderer": "flot",
-      "repeat": null,
       "seriesOverrides": [
         {
+          "$$hashKey": "object:2970",
           "alias": "/.*_transmit$/",
           "transform": "negative-Y"
         }
@@ -1400,6 +1688,10 @@
       "steppedLine": false,
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "increase(node_network_receive_bytes_total{instance=~\"$node\",device=~\"$device\"}[60m])",
           "interval": "60m",
           "intervalFactor": 1,
@@ -1410,6 +1702,10 @@
           "target": ""
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "increase(node_network_transmit_bytes_total{instance=~\"$node\",device=~\"$device\"}[60m])",
           "hide": false,
           "interval": "60m",
@@ -1420,9 +1716,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Internet traffic per hour $device",
       "tooltip": {
         "msResolution": false,
@@ -1432,33 +1726,364 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
+          "$$hashKey": "object:2977",
           "format": "bytes",
           "label": "transmit（-）/receive（+）",
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
+          "$$hashKey": "object:2978",
           "format": "short",
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": false
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(245, 54, 54, 0.9)",
+                "value": null
+              },
+              {
+                "color": "rgba(237, 129, 40, 0.89)",
+                "value": 1
+              },
+              {
+                "color": "rgba(50, 172, 45, 0.97)",
+                "value": 2
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 0,
+        "y": 27
+      },
+      "id": 14,
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.4.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "count(node_cpu_seconds_total{instance=~\"$node\", mode='system'})",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A",
+          "step": 20
+        }
+      ],
+      "title": "CPU Cores",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(245, 54, 54, 0.9)",
+                "value": null
+              },
+              {
+                "color": "rgba(237, 129, 40, 0.89)",
+                "value": 100000
+              },
+              {
+                "color": "rgba(50, 172, 45, 0.97)",
+                "value": 1000000
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 15,
+        "y": 27
+      },
+      "id": 179,
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.4.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "avg(node_filesystem_files_free{instance=~\"$node\",mountpoint=\"$maxmount\",fstype=~\"ext.?|xfs\"})",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A",
+          "step": 20
+        }
+      ],
+      "title": "Free inodes:$maxmount ",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(245, 54, 54, 0.9)",
+                "value": null
+              },
+              {
+                "color": "rgba(237, 129, 40, 0.89)",
+                "value": 2
+              },
+              {
+                "color": "rgba(50, 172, 45, 0.97)",
+                "value": 3
+              }
+            ]
+          },
+          "unit": "bytes"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 0,
+        "y": 29
+      },
+      "id": 75,
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.4.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "sum(node_memory_MemTotal_bytes{instance=~\"$node\"})",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{instance}}",
+          "refId": "A",
+          "step": 20
+        }
+      ],
+      "title": "Total RAM",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(245, 54, 54, 0.9)",
+                "value": null
+              },
+              {
+                "color": "rgba(237, 129, 40, 0.89)",
+                "value": 1024
+              },
+              {
+                "color": "rgba(50, 172, 45, 0.97)",
+                "value": 10000
+              }
+            ]
+          },
+          "unit": "locale"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 15,
+        "y": 29
+      },
+      "id": 178,
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.4.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "avg(node_filefd_maximum{instance=~\"$node\"})",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A",
+          "step": 20
+        }
+      ],
+      "title": "Total filefd",
+      "type": "stat"
     },
     {
       "aliasColors": {
@@ -1479,12 +2104,14 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "decimals": 2,
       "description": "",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1495,7 +2122,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 22
+        "y": 31
       },
       "hiddenSeries": false,
       "id": 7,
@@ -1509,7 +2136,6 @@
         "min": true,
         "rightSide": false,
         "show": true,
-        "sideWidth": null,
         "sort": "current",
         "sortDesc": true,
         "total": false,
@@ -1517,21 +2143,19 @@
       },
       "lines": true,
       "linewidth": 2,
-      "links": [],
       "maxPerRow": 6,
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true,
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.0",
+      "pluginVersion": "10.4.2",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
-      "repeat": null,
       "seriesOverrides": [
         {
+          "$$hashKey": "object:3051",
           "alias": "/.*Total/",
           "color": "#C4162A",
           "fill": 0
@@ -1542,6 +2166,10 @@
       "steppedLine": false,
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "avg(rate(node_cpu_seconds_total{instance=~\"$node\",mode=\"system\"}[$interval])) by (instance) *100",
           "format": "time_series",
           "hide": false,
@@ -1553,6 +2181,10 @@
           "step": 20
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "avg(rate(node_cpu_seconds_total{instance=~\"$node\",mode=\"user\"}[$interval])) by (instance) *100",
           "format": "time_series",
           "hide": false,
@@ -1563,6 +2195,10 @@
           "step": 240
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "avg(rate(node_cpu_seconds_total{instance=~\"$node\",mode=\"iowait\"}[$interval])) by (instance) *100",
           "format": "time_series",
           "hide": false,
@@ -1574,6 +2210,10 @@
           "step": 240
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "(1 - avg(rate(node_cpu_seconds_total{instance=~\"$node\",mode=\"idle\"}[$interval])) by (instance))*100",
           "format": "time_series",
           "hide": false,
@@ -1585,9 +2225,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "CPU% Basic",
       "tooltip": {
         "shared": true,
@@ -1596,34 +2234,28 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
+          "$$hashKey": "object:11294",
           "decimals": 0,
           "format": "percent",
           "label": "",
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
+          "$$hashKey": "object:11295",
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": false
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
@@ -1641,11 +2273,13 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "decimals": 2,
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1656,7 +2290,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 22
+        "y": 31
       },
       "height": "300",
       "hiddenSeries": false,
@@ -1678,24 +2312,24 @@
       },
       "lines": true,
       "linewidth": 2,
-      "links": [],
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true,
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.0",
+      "pluginVersion": "10.4.2",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:3234",
           "alias": "Total",
           "color": "#C4162A",
           "fill": 0
         },
         {
+          "$$hashKey": "object:3235",
           "alias": "Used%",
           "color": "rgb(0, 209, 255)",
           "lines": false,
@@ -1709,6 +2343,10 @@
       "steppedLine": false,
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_memory_MemTotal_bytes{instance=~\"$node\"}",
           "format": "time_series",
           "hide": false,
@@ -1720,6 +2358,10 @@
           "step": 4
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_memory_MemTotal_bytes{instance=~\"$node\"} - node_memory_MemAvailable_bytes{instance=~\"$node\"}",
           "format": "time_series",
           "hide": false,
@@ -1730,6 +2372,10 @@
           "step": 4
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_memory_MemAvailable_bytes{instance=~\"$node\"}",
           "format": "time_series",
           "hide": false,
@@ -1740,6 +2386,10 @@
           "step": 4
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_memory_Buffers_bytes{instance=~\"$node\"}",
           "format": "time_series",
           "hide": true,
@@ -1750,6 +2400,10 @@
           "step": 4
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_memory_MemFree_bytes{instance=~\"$node\"}",
           "format": "time_series",
           "hide": true,
@@ -1759,6 +2413,10 @@
           "step": 4
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_memory_Cached_bytes{instance=~\"$node\"}",
           "format": "time_series",
           "hide": true,
@@ -1768,6 +2426,10 @@
           "step": 4
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_memory_MemTotal_bytes{instance=~\"$node\"} - (node_memory_Cached_bytes{instance=~\"$node\"} + node_memory_Buffers_bytes{instance=~\"$node\"} + node_memory_MemFree_bytes{instance=~\"$node\"})",
           "format": "time_series",
           "hide": true,
@@ -1775,6 +2437,10 @@
           "refId": "G"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "(1 - (node_memory_MemAvailable_bytes{instance=~\"$node\"} / (node_memory_MemTotal_bytes{instance=~\"$node\"})))* 100",
           "format": "time_series",
           "hide": false,
@@ -1785,9 +2451,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Memory Basic",
       "tooltip": {
         "shared": true,
@@ -1796,22 +2460,20 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3130",
           "format": "bytes",
-          "label": null,
           "logBase": 1,
-          "max": null,
           "min": "0",
           "show": true
         },
         {
+          "$$hashKey": "object:3131",
           "format": "percent",
           "label": "Utilization%",
           "logBase": 1,
@@ -1821,8 +2483,7 @@
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
@@ -1833,11 +2494,13 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "decimals": 2,
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1848,7 +2511,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 22
+        "y": 31
       },
       "height": "300",
       "hiddenSeries": false,
@@ -1870,19 +2533,18 @@
       },
       "lines": true,
       "linewidth": 1,
-      "links": [],
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true,
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.0",
+      "pluginVersion": "10.4.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:3308",
           "alias": "/.*_transmit$/",
           "transform": "negative-Y"
         }
@@ -1892,6 +2554,10 @@
       "steppedLine": false,
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "rate(node_network_receive_bytes_total{instance=~'$node',device=~\"$device\"}[$interval])*8",
           "format": "time_series",
           "interval": "",
@@ -1901,6 +2567,10 @@
           "step": 4
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "rate(node_network_transmit_bytes_total{instance=~'$node',device=~\"$device\"}[$interval])*8",
           "format": "time_series",
           "interval": "",
@@ -1911,9 +2581,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Network bandwidth usage per second $device",
       "tooltip": {
         "shared": true,
@@ -1922,33 +2590,27 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3315",
           "format": "bps",
           "label": "transmit（-）/receive（+）",
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
+          "$$hashKey": "object:3316",
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": false
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
@@ -1960,13 +2622,15 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "decimals": 2,
       "editable": true,
       "error": false,
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1978,7 +2642,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 30
+        "y": 39
       },
       "height": "300",
       "hiddenSeries": false,
@@ -2000,21 +2664,19 @@
       },
       "lines": true,
       "linewidth": 2,
-      "links": [],
       "maxPerRow": 6,
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true,
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.0",
+      "pluginVersion": "10.4.2",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
-      "repeat": null,
       "seriesOverrides": [
         {
+          "$$hashKey": "object:3389",
           "alias": "/.*CPU cores/",
           "color": "#C4162A"
         }
@@ -2024,6 +2686,10 @@
       "steppedLine": false,
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_load1{instance=~\"$node\"}",
           "format": "time_series",
           "instant": false,
@@ -2036,6 +2702,10 @@
           "target": ""
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_load5{instance=~\"$node\"}",
           "format": "time_series",
           "instant": false,
@@ -2046,6 +2716,10 @@
           "step": 20
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_load15{instance=~\"$node\"}",
           "format": "time_series",
           "instant": false,
@@ -2056,6 +2730,10 @@
           "step": 20
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": " sum(count(node_cpu_seconds_total{instance=~\"$node\", mode='system'}) by (cpu,instance)) by(instance)",
           "format": "time_series",
           "instant": false,
@@ -2067,9 +2745,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "System Load",
       "tooltip": {
         "msResolution": false,
@@ -2079,31 +2755,26 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
+          "$$hashKey": "object:3396",
           "format": "short",
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
+          "$$hashKey": "object:3397",
           "format": "short",
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
@@ -2113,12 +2784,14 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "decimals": 2,
       "description": "Per second read / write bytes ",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -2129,7 +2802,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 30
+        "y": 39
       },
       "height": "300",
       "hiddenSeries": false,
@@ -2150,19 +2823,18 @@
       },
       "lines": true,
       "linewidth": 2,
-      "links": [],
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true,
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.0",
+      "pluginVersion": "10.4.2",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:3474",
           "alias": "/.*_Read bytes$/",
           "transform": "negative-Y"
         }
@@ -2172,6 +2844,10 @@
       "steppedLine": false,
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "rate(node_disk_read_bytes_total{instance=~\"$node\"}[$interval])",
           "format": "time_series",
           "interval": "",
@@ -2181,6 +2857,10 @@
           "step": 10
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "rate(node_disk_written_bytes_total{instance=~\"$node\"}[$interval])",
           "format": "time_series",
           "hide": false,
@@ -2192,9 +2872,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Disk R/W Data",
       "tooltip": {
         "shared": true,
@@ -2203,34 +2881,27 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
-          "decimals": null,
+          "$$hashKey": "object:3481",
           "format": "Bps",
           "label": "Bytes read (-) / write (+)",
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
+          "$$hashKey": "object:3482",
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": false
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
@@ -2238,12 +2909,14 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
       "decimals": 1,
       "description": "",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -2254,7 +2927,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 30
+        "y": 39
       },
       "hiddenSeries": false,
       "id": 174,
@@ -2268,7 +2941,6 @@
         "min": true,
         "rightSide": false,
         "show": true,
-        "sideWidth": null,
         "sort": "current",
         "sortDesc": true,
         "total": false,
@@ -2276,19 +2948,18 @@
       },
       "lines": true,
       "linewidth": 2,
-      "links": [],
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true,
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.2.0",
+      "pluginVersion": "10.4.2",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:3554",
           "alias": "/Inodes.*/",
           "yaxis": 2
         }
@@ -2298,6 +2969,10 @@
       "steppedLine": false,
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "(node_filesystem_size_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint !~\".*pod.*\"}-node_filesystem_free_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint !~\".*pod.*\"}) *100/(node_filesystem_avail_bytes {instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint !~\".*pod.*\"}+(node_filesystem_size_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint !~\".*pod.*\"}-node_filesystem_free_bytes{instance=~'$node',fstype=~\"ext.*|xfs\",mountpoint !~\".*pod.*\"}))",
           "format": "time_series",
           "instant": false,
@@ -2307,6 +2982,10 @@
           "refId": "A"
         },
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
           "expr": "node_filesystem_files_free{instance=~'$node',fstype=~\"ext.?|xfs\"} / node_filesystem_files{instance=~'$node',fstype=~\"ext.?|xfs\"}",
           "hide": true,
           "interval": "",
@@ -2315,9 +2994,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Disk Space Used% Basic",
       "tooltip": {
         "shared": true,
@@ -2326,15 +3003,13 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
-          "decimals": null,
+          "$$hashKey": "object:3561",
           "format": "percent",
           "label": "",
           "logBase": 1,
@@ -2343,24 +3018,813 @@
           "show": true
         },
         {
+          "$$hashKey": "object:3562",
           "decimals": 2,
           "format": "percentunit",
-          "label": null,
           "logBase": 1,
           "max": "1",
-          "min": null,
           "show": false
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {
+        "vda_write": "#6ED0E0"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "decimals": 2,
+      "description": "Read/write completions per second\n\nWrites completed: 每个磁盘分区每秒写完成次数\n\nIO now 每个磁盘分区每秒正在处理的输入/输出请求数",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 0,
+        "y": 47
+      },
+      "height": "300",
+      "hiddenSeries": false,
+      "id": 161,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "10.4.2",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:3711",
+          "alias": "/.*_Reads completed$/",
+          "transform": "negative-Y"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_disk_reads_completed_total{instance=~\"$node\"}[$interval])",
+          "format": "time_series",
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{device}}_Reads completed",
+          "refId": "A",
+          "step": 10
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_disk_writes_completed_total{instance=~\"$node\"}[$interval])",
+          "format": "time_series",
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{device}}_Writes completed",
+          "refId": "B",
+          "step": 10
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "node_disk_io_now{instance=~\"$node\"}",
+          "format": "time_series",
+          "hide": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{device}}",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Disk IOps Completed（IOPS）",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:3718",
+          "format": "iops",
+          "label": "IO read (-) / write (+)",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:3719",
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {
+        "Idle - Waiting for something to happen": "#052B51",
+        "guest": "#9AC48A",
+        "idle": "#052B51",
+        "iowait": "#EAB839",
+        "irq": "#BF1B00",
+        "nice": "#C15C17",
+        "sdb_每秒I/O操作%": "#d683ce",
+        "softirq": "#E24D42",
+        "steal": "#FCE2DE",
+        "system": "#508642",
+        "user": "#5195CE",
+        "磁盘花费在I/O操作占比": "#ba43a9"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "description": "The time spent on I/O in the natural time of each second.（wall-clock time）",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 8,
+        "y": 47
+      },
+      "hiddenSeries": false,
+      "id": 175,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "maxPerRow": 6,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "10.4.2",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_disk_io_time_seconds_total{instance=~\"$node\"}[$interval])",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{device}}_ IO time",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Time Spent Doing I/Os",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:3796",
+          "format": "percentunit",
+          "label": "",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:3797",
+          "format": "short",
+          "logBase": 1,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {
+        "vda": "#6ED0E0"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "decimals": 2,
+      "description": "Time spent on each read/write operation",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 1,
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 16,
+        "y": 47
+      },
+      "height": "300",
+      "hiddenSeries": false,
+      "id": 160,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": true,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "nullPointMode": "null as zero",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "10.4.2",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:4023",
+          "alias": "/,*_Read time$/",
+          "transform": "negative-Y"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_disk_read_time_seconds_total{instance=~\"$node\"}[$interval]) / rate(node_disk_reads_completed_total{instance=~\"$node\"}[$interval])",
+          "format": "time_series",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{device}}_Read time",
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_disk_write_time_seconds_total{instance=~\"$node\"}[$interval]) / rate(node_disk_writes_completed_total{instance=~\"$node\"}[$interval])",
+          "format": "time_series",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{device}}_Write time",
+          "refId": "C"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_disk_io_time_seconds_total{instance=~\"$node\"}[$interval])",
+          "format": "time_series",
+          "hide": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{device}}",
+          "refId": "A",
+          "step": 10
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_disk_io_time_weighted_seconds_total{instance=~\"$node\"}[$interval])",
+          "format": "time_series",
+          "hide": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{device}}_加权",
+          "refId": "D"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Disk R/W Time(Reference: less than 100ms)(beta)",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:4030",
+          "format": "s",
+          "label": "Time read (-) / write (+)",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:4031",
+          "format": "short",
+          "logBase": 1,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {
+        "192.168.200.241:9100_TCP_alloc": "semi-dark-blue",
+        "TCP": "#6ED0E0",
+        "TCP_alloc": "blue"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "decimals": 2,
+      "description": "Sockets_used - Sockets currently in use\n\nCurrEstab - TCP connections for which the current state is either ESTABLISHED or CLOSE- WAIT\n\nTCP_alloc - Allocated sockets\n\nTCP_tw - Sockets wating close\n\nUDP_inuse - Udp sockets currently in use\n\nRetransSegs - TCP retransmission packets\n\nOutSegs - Number of packets sent by TCP\n\nInSegs - Number of packets received by TCP",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "links": []
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 16,
+        "x": 0,
+        "y": 56
+      },
+      "height": "300",
+      "hiddenSeries": false,
+      "id": 158,
+      "interval": "",
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": true,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": true,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.2.0",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:4103",
+          "alias": "/.*Sockets_used/",
+          "color": "#E02F44",
+          "lines": false,
+          "pointradius": 1,
+          "points": true,
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "node_netstat_Tcp_CurrEstab{instance=~'$node'}",
+          "format": "time_series",
+          "hide": false,
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "CurrEstab",
+          "refId": "A",
+          "step": 20
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "node_sockstat_TCP_tw{instance=~'$node'}",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "TCP_tw",
+          "refId": "D"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "node_sockstat_sockets_used{instance=~'$node'}",
+          "hide": false,
+          "interval": "30m",
+          "intervalFactor": 1,
+          "legendFormat": "Sockets_used",
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "node_sockstat_UDP_inuse{instance=~'$node'}",
+          "interval": "",
+          "legendFormat": "UDP_inuse",
+          "refId": "C"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "node_sockstat_TCP_alloc{instance=~'$node'}",
+          "interval": "",
+          "legendFormat": "TCP_alloc",
+          "refId": "E"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_netstat_Tcp_PassiveOpens{instance=~'$node'}[$interval])",
+          "hide": true,
+          "interval": "",
+          "legendFormat": "{{instance}}_Tcp_PassiveOpens",
+          "refId": "G"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_netstat_Tcp_ActiveOpens{instance=~'$node'}[$interval])",
+          "hide": true,
+          "interval": "",
+          "legendFormat": "{{instance}}_Tcp_ActiveOpens",
+          "refId": "F"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_netstat_Tcp_InSegs{instance=~'$node'}[$interval])",
+          "interval": "",
+          "legendFormat": "Tcp_InSegs",
+          "refId": "H"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_netstat_Tcp_OutSegs{instance=~'$node'}[$interval])",
+          "interval": "",
+          "legendFormat": "Tcp_OutSegs",
+          "refId": "I"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_netstat_Tcp_RetransSegs{instance=~'$node'}[$interval])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Tcp_RetransSegs",
+          "refId": "J"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_netstat_TcpExt_ListenDrops{instance=~'$node'}[$interval])",
+          "hide": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "K"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Network Sockstat",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:4118",
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:4119",
+          "format": "short",
+          "label": "Total_Sockets_used",
+          "logBase": 1,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    },
+    {
+      "aliasColors": {
+        "filefd_192.168.200.241:9100": "super-light-green",
+        "switches_192.168.200.241:9100": "semi-dark-red",
+        "使用的文件描述符_10.118.72.128:9100": "red",
+        "每秒上下文切换次数_10.118.71.245:9100": "yellow",
+        "每秒上下文切换次数_10.118.72.128:9100": "yellow"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "links": []
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 1,
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 56
+      },
+      "hiddenSeries": false,
+      "hideTimeOverride": false,
+      "id": 16,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": true,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.2.0",
+      "pointradius": 1,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:4197",
+          "alias": "switches",
+          "color": "#FADE2A",
+          "lines": false,
+          "pointradius": 1,
+          "points": true,
+          "yaxis": 2
+        },
+        {
+          "$$hashKey": "object:4198",
+          "alias": "used filefd",
+          "color": "#F2495C"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "node_filefd_allocated{instance=~\"$node\"}",
+          "format": "time_series",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 5,
+          "legendFormat": "used filefd",
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "rate(node_context_switches_total{instance=~\"$node\"}[$interval])",
+          "interval": "",
+          "intervalFactor": 5,
+          "legendFormat": "switches",
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "expr": "  (node_filefd_allocated{instance=~\"$node\"}/node_filefd_maximum{instance=~\"$node\"}) *100",
+          "format": "time_series",
+          "hide": true,
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 5,
+          "legendFormat": "使用的文件描述符占比_{{instance}}",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Open  File Descriptor(left)/Context switches(right)",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:4219",
+          "format": "short",
+          "label": "used filefd",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:4220",
+          "format": "short",
+          "label": "context_switches",
+          "logBase": 1,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
       }
     }
   ],
   "refresh": "",
-  "schemaVersion": 20,
-  "style": "dark",
+  "schemaVersion": 39,
   "tags": [
     "Prometheus",
     "node_exporter",
@@ -2372,10 +3836,14 @@
         "allValue": "",
         "current": {
           "isNone": true,
+          "selected": false,
           "text": "None",
           "value": ""
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
         "definition": "label_values(origin_prometheus)",
         "hide": 0,
         "includeAll": false,
@@ -2389,18 +3857,20 @@
         "skipUrlSync": false,
         "sort": 5,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
       },
       {
-        "allValue": null,
         "current": {
-          "text": "Nodes",
-          "value": "Nodes"
+          "selected": false,
+          "text": "TFSI",
+          "value": "TFSI"
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\"}, job)",
         "hide": 0,
         "includeAll": false,
@@ -2414,18 +3884,20 @@
         "skipUrlSync": false,
         "sort": 5,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
       },
       {
-        "allValue": null,
         "current": {
+          "selected": false,
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}, nodename)",
         "hide": 0,
         "includeAll": true,
@@ -2439,19 +3911,21 @@
         "skipUrlSync": false,
         "sort": 5,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
       },
       {
         "allFormat": "glob",
-        "allValue": null,
         "current": {
-          "text": "142.132.221.103",
-          "value": "142.132.221.103"
+          "selected": false,
+          "text": "10_s",
+          "value": "10_s"
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",nodename=~\"$hostname\"},instance)",
         "hide": 0,
         "includeAll": false,
@@ -2466,19 +3940,21 @@
         "skipUrlSync": false,
         "sort": 5,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
       },
       {
         "allFormat": "glob",
-        "allValue": null,
         "current": {
+          "selected": false,
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
         "definition": "label_values(node_network_info{origin_prometheus=~\"$origin_prometheus\",device!~'tap.*|veth.*|br.*|docker.*|virbr.*|lo.*|cni.*'},device)",
         "hide": 0,
         "includeAll": true,
@@ -2493,7 +3969,6 @@
         "skipUrlSync": false,
         "sort": 1,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
@@ -2503,6 +3978,7 @@
         "auto_count": 100,
         "auto_min": "10s",
         "current": {
+          "selected": false,
           "text": "2m",
           "value": "2m"
         },
@@ -2553,12 +4029,15 @@
         "type": "interval"
       },
       {
-        "allValue": null,
         "current": {
+          "selected": false,
           "text": "/",
           "value": "/"
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
         "definition": "query_result(topk(1,sort_desc (max(node_filesystem_size_bytes{origin_prometheus=~\"$origin_prometheus\",instance=~'$node',fstype=~\"ext.?|xfs\",mountpoint!~\".*pods.*\"}) by (mountpoint))))",
         "hide": 2,
         "includeAll": false,
@@ -2572,18 +4051,20 @@
         "skipUrlSync": false,
         "sort": 5,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
       },
       {
-        "allValue": null,
         "current": {
-          "text": "RPC",
-          "value": "RPC"
+          "selected": false,
+          "text": "vmi1968743.contaboserver.net",
+          "value": "vmi1968743.contaboserver.net"
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",instance=~\"$node\"}, nodename)",
         "hide": 2,
         "includeAll": false,
@@ -2597,18 +4078,20 @@
         "skipUrlSync": false,
         "sort": 5,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
       },
       {
-        "allValue": null,
         "current": {
-          "text": "2",
-          "value": "2"
+          "selected": false,
+          "text": "56",
+          "value": "56"
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
         "definition": "query_result(count(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}))",
         "hide": 2,
         "includeAll": false,
@@ -2622,7 +4105,6 @@
         "skipUrlSync": false,
         "sort": 0,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
@@ -2630,7 +4112,7 @@
     ]
   },
   "time": {
-    "from": "now-12h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
@@ -2657,7 +4139,8 @@
     ]
   },
   "timezone": "browser",
-  "title": "Node Exporter Dashboard",
+  "title": "Node Exporter Dashboard EN 20201010-StarsL.cn",
   "uid": "xfpJB9FGz",
-  "version": 3
+  "version": 4,
+  "weekStart": ""
 }
