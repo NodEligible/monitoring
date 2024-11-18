@@ -84,7 +84,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable prometheus
 sudo systemctl start prometheus
 
-# Перевірка статусу Prometheus
 if ! systemctl is-active --quiet prometheus; then
   echo -e "${RED}Ошибка при запуске Prometheus! Проверьте логи.${NC}"
   exit 1
