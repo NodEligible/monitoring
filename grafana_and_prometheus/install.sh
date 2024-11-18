@@ -31,11 +31,30 @@ sudo mkdir -p /etc/prometheus/data
 cat <<EOF > /etc/prometheus/prometheus.yml
 global:
   scrape_interval: 20s
-
+  
 scrape_configs:
-  - job_name: "prometheus"
+  - job_name      : "prometheus"
     static_configs:
       - targets: ["localhost:19980"]
+
+  - job_name      : "NAME"
+    scrape_interval: 15s
+    static_configs:
+      - targets:
+          - localhost:9100
+        labels:
+          instance: '1_server'
+      - targets:
+          - localhost:9100
+        labels:
+          instance: '2_server'
+      - targets:
+          - localhost:9100
+        labels:
+          instance: '3_server'
+      - targets:
+          - localhost:9100
+
 EOF
 
 sudo useradd -rs /bin/false prometheus
