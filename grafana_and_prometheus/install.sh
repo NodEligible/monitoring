@@ -135,6 +135,7 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 rm -rf grafana_10.4.2_amd64.deb
 
+systemctl status prometheus
 systemctl status grafana-server
 
 echo -e "${GREEN}Grafana успешно установлена!${NC}"
