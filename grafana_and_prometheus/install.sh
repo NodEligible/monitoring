@@ -140,3 +140,4 @@ systemctl status grafana-server
 echo -e "${GREEN}Grafana успешно установлена!${NC}"
 echo -e "${YELLOW}Grafana доступна по адресу: http://${PROMETHEUS_IP}:3000${NC}"
 echo -e "${YELLOW}Prometheus доступен по адресу: http://${PROMETHEUS_IP}:19980${NC}"
+echo -e "${YELLOW}Login:admin  Password:admin{NC}"
