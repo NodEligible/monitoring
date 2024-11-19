@@ -8,7 +8,7 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 GRAFANA_VERSION="10.4.2"
-read -p "Введите ip адрес вашего сервера: " PROMETHEUS_IP
+PROMETHEUS_IP=$(hostname -I | awk '{print $1}')
 PROMETHEUS_URL="http://${PROMETHEUS_IP}:19980"
 
 
