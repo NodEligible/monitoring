@@ -8,7 +8,7 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 PROMETHEUS_VERSION="2.51.1"
-GRAFANA_VERSION="10.4.2"
+GRAFANA_VERSION="6.4.3"
 
 PROMETHEUS_IP=$(hostname -I | awk '{print $1}')
 PROMETHEUS_URL="http://${PROMETHEUS_IP}:19980"
@@ -133,9 +133,7 @@ curl -o /etc/grafana/dashboards/dashboard.json https://raw.githubusercontent.com
 sudo systemctl daemon-reload
 sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
-rm -rf grafana_10.4.2_amd64.deb
-
-systemctl status grafana-server
+rm -rf grafana_6.4.3_amd64.deb
 
 echo -e "${GREEN}Grafana успешно установлена!${NC}"
 echo -e "${YELLOW}Grafana доступна по адресу: http://${PROMETHEUS_IP}:3000 Login:admin  Password:admin${NC}"
