@@ -99,8 +99,8 @@ echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stab
 sudo apt-get update
 apt-get install -y adduser libfontconfig1 musl
 
-wget https://dl.grafana.com/oss/release/grafana_10.4.2_amd64.deb
-dpkg -i grafana_10.4.2_amd64.deb
+wget https://dl.grafana.com/oss/release/grafana_6.4.3_amd64.deb
+dpkg -i grafana_6.4.3_amd64.deb
 
 mkdir -p /etc/grafana/provisioning/datasources/
 cat <<EOF > /etc/grafana/provisioning/datasources/prometheus.yaml
