@@ -1,56 +1,7 @@
 {
-  "__inputs": [
-    {
-      "name": "DS__VICTORIAMETRICS",
-      "label": " VictoriaMetrics",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "panel",
-      "id": "bargauge",
-      "name": "Bar gauge",
-      "version": ""
-    },
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "7.2.0"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": ""
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "1.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "stat",
-      "name": "Stat",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "table-old",
-      "name": "Table (old)",
-      "version": ""
-    }
-  ],
   "annotations": {
     "list": [
       {
-        "$$hashKey": "object:2875",
         "builtIn": 1,
         "datasource": "-- Grafana --",
         "enable": true,
@@ -61,15 +12,14 @@
       }
     ]
   },
-  "description": "【English version】Update 2020.10.10, add the overall resource overview! Support Grafana6&7,Support Node Exporter v0.16 and above.Optimize the main metrics display. Includes: CPU, memory, disk IO, network, temperature and other monitoring metrics。https://github.com/starsliao/Prometheus",
+  "description": "",
   "editable": true,
   "gnetId": 11074,
   "graphTooltip": 0,
-  "id": null,
-  "iteration": 1602304673501,
+  "id": 3,
+  "iteration": 1731194361973,
   "links": [
     {
-      "$$hashKey": "object:2300",
       "icon": "bolt",
       "tags": [],
       "targetBlank": true,
@@ -79,7 +29,6 @@
       "url": "https://grafana.com/grafana/dashboards/11074"
     },
     {
-      "$$hashKey": "object:2301",
       "icon": "question",
       "tags": [],
       "targetBlank": true,
@@ -89,7 +38,6 @@
       "url": "https://github.com/starsliao"
     },
     {
-      "$$hashKey": "object:2302",
       "asDropdown": true,
       "icon": "external link",
       "tags": [],
@@ -101,7 +49,7 @@
   "panels": [
     {
       "collapsed": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -115,7 +63,7 @@
     },
     {
       "columns": [],
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "description": "Partition utilization, disk read, disk write, download bandwidth, upload bandwidth, if there are multiple network cards or multiple partitions, it is the value of the network card or partition with the highest utilization rate collected.\n\nCurrEstab: The number of TCP connections whose current status is ESTABLISHED or CLOSE-WAIT.",
       "fieldConfig": {
         "defaults": {
@@ -131,6 +79,7 @@
         "y": 1
       },
       "id": 185,
+      "options": {},
       "pageSize": null,
       "showHeader": true,
       "sort": {
@@ -139,7 +88,6 @@
       },
       "styles": [
         {
-          "$$hashKey": "object:1600",
           "alias": "Hostname",
           "align": "auto",
           "colorMode": null,
@@ -160,7 +108,6 @@
           "unit": "bytes"
         },
         {
-          "$$hashKey": "object:1601",
           "alias": "IP（Link to details）",
           "align": "auto",
           "colorMode": null,
@@ -182,7 +129,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:1602",
           "alias": "Memory",
           "align": "auto",
           "colorMode": null,
@@ -201,7 +147,6 @@
           "unit": "bytes"
         },
         {
-          "$$hashKey": "object:1603",
           "alias": "CPU Cores",
           "align": "auto",
           "colorMode": null,
@@ -219,7 +164,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:1604",
           "alias": " Uptime",
           "align": "auto",
           "colorMode": null,
@@ -237,7 +181,6 @@
           "unit": "s"
         },
         {
-          "$$hashKey": "object:1605",
           "alias": "Partition used%*",
           "align": "auto",
           "colorMode": "cell",
@@ -258,7 +201,6 @@
           "unit": "percent"
         },
         {
-          "$$hashKey": "object:1606",
           "alias": "CPU used%",
           "align": "auto",
           "colorMode": "cell",
@@ -279,7 +221,6 @@
           "unit": "percent"
         },
         {
-          "$$hashKey": "object:1607",
           "alias": "Memory used%",
           "align": "auto",
           "colorMode": "cell",
@@ -300,7 +241,6 @@
           "unit": "percent"
         },
         {
-          "$$hashKey": "object:1608",
           "alias": "Disk read*",
           "align": "auto",
           "colorMode": "cell",
@@ -321,7 +261,6 @@
           "unit": "Bps"
         },
         {
-          "$$hashKey": "object:1609",
           "alias": "Disk write*",
           "align": "auto",
           "colorMode": "cell",
@@ -342,7 +281,6 @@
           "unit": "Bps"
         },
         {
-          "$$hashKey": "object:1610",
           "alias": "Download*",
           "align": "auto",
           "colorMode": "cell",
@@ -363,7 +301,6 @@
           "unit": "bps"
         },
         {
-          "$$hashKey": "object:1611",
           "alias": "Upload*",
           "align": "auto",
           "colorMode": "cell",
@@ -384,7 +321,6 @@
           "unit": "bps"
         },
         {
-          "$$hashKey": "object:1612",
           "alias": "5m load",
           "align": "auto",
           "colorMode": null,
@@ -402,7 +338,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:1613",
           "alias": "CurrEstab",
           "align": "auto",
           "colorMode": "cell",
@@ -423,7 +358,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:1614",
           "alias": "TCP_tw",
           "align": "center",
           "colorMode": "cell",
@@ -444,7 +378,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:1615",
           "alias": "",
           "align": "right",
           "colorMode": null,
@@ -590,7 +523,7 @@
       "timeShift": null,
       "title": "Server Resource Overview【JOB：$job，Total：$total】",
       "transform": "table",
-      "type": "table-old"
+      "type": "table"
     },
     {
       "aliasColors": {
@@ -611,7 +544,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "decimals": null,
       "description": "",
       "fieldConfig": {
@@ -653,7 +586,8 @@
       "maxPerRow": 6,
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true
+        "alertThreshold": true,
+        "dataLinks": []
       },
       "percentage": false,
       "pluginVersion": "7.2.0",
@@ -663,7 +597,6 @@
       "repeat": null,
       "seriesOverrides": [
         {
-          "$$hashKey": "object:2312",
           "alias": "Overall average used%",
           "lines": false,
           "pointradius": 1,
@@ -671,7 +604,6 @@
           "yaxis": 2
         },
         {
-          "$$hashKey": "object:2313",
           "alias": "CPU Cores",
           "color": "#C4162A"
         }
@@ -732,7 +664,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:8791",
           "decimals": null,
           "format": "short",
           "label": "Total 5m load",
@@ -742,7 +673,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:8792",
           "decimals": 0,
           "format": "percent",
           "label": "Overall average used%",
@@ -771,7 +701,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "decimals": 1,
       "fieldConfig": {
         "defaults": {
@@ -809,7 +739,8 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true
+        "alertThreshold": true,
+        "dataLinks": []
       },
       "percentage": false,
       "pluginVersion": "7.2.0",
@@ -818,13 +749,11 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:2494",
           "alias": "Total",
           "color": "#C4162A",
           "fill": 0
         },
         {
-          "$$hashKey": "object:2495",
           "alias": "Overall Average Used%",
           "lines": false,
           "pointradius": 1,
@@ -887,7 +816,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:8938",
           "decimals": null,
           "format": "bytes",
           "label": "Total",
@@ -897,7 +825,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:8939",
           "decimals": null,
           "format": "percent",
           "label": "Overall Average Used%",
@@ -917,7 +844,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "decimals": 1,
       "description": "",
       "fieldConfig": {
@@ -958,7 +885,8 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true
+        "alertThreshold": true,
+        "dataLinks": []
       },
       "percentage": false,
       "pluginVersion": "7.2.0",
@@ -967,7 +895,6 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:2617",
           "alias": "Overall Average Used%",
           "lines": false,
           "pointradius": 1,
@@ -975,7 +902,6 @@
           "yaxis": 2
         },
         {
-          "$$hashKey": "object:2618",
           "alias": "Total",
           "color": "#C4162A"
         }
@@ -1032,7 +958,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:8990",
           "decimals": 1,
           "format": "bytes",
           "label": "Total",
@@ -1042,7 +967,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:8991",
           "decimals": null,
           "format": "percent",
           "label": "Overall Average Used%",
@@ -1059,7 +983,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -1072,88 +996,7 @@
       "type": "row"
     },
     {
-      "cacheTimeout": null,
-      "datasource": "${DS__VICTORIAMETRICS}",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "decimals": 0,
-          "mappings": [
-            {
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
-            }
-          ],
-          "nullValueMode": "null",
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "rgba(245, 54, 54, 0.9)",
-                "value": null
-              },
-              {
-                "color": "rgba(237, 129, 40, 0.89)",
-                "value": 1
-              },
-              {
-                "color": "rgba(50, 172, 45, 0.97)",
-                "value": 3
-              }
-            ]
-          },
-          "unit": "s"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 2,
-        "x": 0,
-        "y": 16
-      },
-      "hideTimeOverride": true,
-      "id": 15,
-      "interval": null,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "7.2.0",
-      "targets": [
-        {
-          "expr": "avg(time() - node_boot_time_seconds{instance=~\"$node\"})",
-          "format": "time_series",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "A",
-          "step": 40
-        }
-      ],
-      "title": "Uptime",
-      "type": "stat"
-    },
-    {
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1197,13 +1040,35 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 3,
-        "x": 2,
+        "w": 7,
+        "x": 0,
         "y": 16
       },
       "id": 177,
       "options": {
         "displayMode": "lcd",
+        "fieldOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "defaults": {
+            "mappings": [],
+            "max": 100,
+            "min": 0,
+            "thresholds": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "override": {},
+          "values": false
+        },
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
@@ -1214,7 +1079,7 @@
         },
         "showUnfilled": true
       },
-      "pluginVersion": "7.2.0",
+      "pluginVersion": "6.4.3",
       "targets": [
         {
           "expr": "100 - (avg(rate(node_cpu_seconds_total{instance=~\"$node\",mode=\"idle\"}[$interval])) * 100)",
@@ -1262,7 +1127,7 @@
     },
     {
       "columns": [],
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "description": "In this kanban: the total disk, usage, available, and usage rate are consistent with the values of the Size, Used, Avail, and Use% columns of the df command, and the value of Use% will be rounded to one decimal place, which will be more accurate .\n\nNote: The Use% algorithm in df is: (size-free) * 100 / (avail + (size-free)), the result is divisible by this value, non-divisible by this value is +1, and the unit of the result is %.\nRefer to the df command source code:",
       "fieldConfig": {
         "defaults": {
@@ -1274,7 +1139,7 @@
       "gridPos": {
         "h": 6,
         "w": 10,
-        "x": 5,
+        "x": 7,
         "y": 16
       },
       "id": 181,
@@ -1285,6 +1150,7 @@
           "url": "https://github.com/coreutils/coreutils/blob/master/src/df.c"
         }
       ],
+      "options": {},
       "pageSize": null,
       "scroll": true,
       "showHeader": true,
@@ -1294,7 +1160,6 @@
       },
       "styles": [
         {
-          "$$hashKey": "object:307",
           "alias": "Mounted on",
           "align": "auto",
           "colorMode": null,
@@ -1314,7 +1179,6 @@
           "unit": "bytes"
         },
         {
-          "$$hashKey": "object:308",
           "alias": "Avail",
           "align": "auto",
           "colorMode": "value",
@@ -1335,7 +1199,6 @@
           "unit": "bytes"
         },
         {
-          "$$hashKey": "object:309",
           "alias": "Used",
           "align": "auto",
           "colorMode": "cell",
@@ -1356,7 +1219,6 @@
           "unit": "percent"
         },
         {
-          "$$hashKey": "object:310",
           "alias": "Size",
           "align": "auto",
           "colorMode": null,
@@ -1375,7 +1237,6 @@
           "unit": "bytes"
         },
         {
-          "$$hashKey": "object:311",
           "alias": "Filesystem",
           "align": "auto",
           "colorMode": null,
@@ -1394,7 +1255,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:312",
           "alias": "Device",
           "align": "auto",
           "colorMode": null,
@@ -1415,7 +1275,6 @@
           "unit": "short"
         },
         {
-          "$$hashKey": "object:313",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1467,89 +1326,7 @@
       ],
       "title": "【$show_hostname】：Disk Space Used Basic(EXT?/XFS)",
       "transform": "table",
-      "type": "table-old"
-    },
-    {
-      "cacheTimeout": null,
-      "datasource": "${DS__VICTORIAMETRICS}",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "decimals": 2,
-          "mappings": [
-            {
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
-            }
-          ],
-          "nullValueMode": "connected",
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "rgba(50, 172, 45, 0.97)",
-                "value": null
-              },
-              {
-                "color": "rgba(237, 129, 40, 0.89)",
-                "value": 20
-              },
-              {
-                "color": "#d44a3a",
-                "value": 50
-              }
-            ]
-          },
-          "unit": "percent"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 2,
-        "x": 15,
-        "y": 16
-      },
-      "id": 20,
-      "interval": null,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "last"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "7.2.0",
-      "targets": [
-        {
-          "expr": "avg(rate(node_cpu_seconds_total{instance=~\"$node\",mode=\"iowait\"}[$interval])) * 100",
-          "format": "time_series",
-          "hide": false,
-          "instant": false,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "A",
-          "step": 20
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "CPU iowait",
-      "type": "stat"
+      "type": "table"
     },
     {
       "aliasColors": {
@@ -1563,7 +1340,7 @@
       "bars": true,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1603,7 +1380,8 @@
       "links": [],
       "nullPointMode": "null as zero",
       "options": {
-        "alertThreshold": true
+        "alertThreshold": true,
+        "dataLinks": []
       },
       "percentage": false,
       "pluginVersion": "7.2.0",
@@ -1613,7 +1391,6 @@
       "repeat": null,
       "seriesOverrides": [
         {
-          "$$hashKey": "object:2970",
           "alias": "/.*_transmit$/",
           "transform": "negative-Y"
         }
@@ -1663,7 +1440,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:2977",
           "format": "bytes",
           "label": "transmit（-）/receive（+）",
           "logBase": 1,
@@ -1672,7 +1448,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:2978",
           "format": "short",
           "logBase": 1,
           "max": null,
@@ -1684,320 +1459,6 @@
         "align": false,
         "alignLevel": null
       }
-    },
-    {
-      "cacheTimeout": null,
-      "datasource": "${DS__VICTORIAMETRICS}",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "mappings": [
-            {
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
-            }
-          ],
-          "nullValueMode": "null",
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "rgba(245, 54, 54, 0.9)",
-                "value": null
-              },
-              {
-                "color": "rgba(237, 129, 40, 0.89)",
-                "value": 1
-              },
-              {
-                "color": "rgba(50, 172, 45, 0.97)",
-                "value": 2
-              }
-            ]
-          },
-          "unit": "short"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 2,
-        "x": 0,
-        "y": 18
-      },
-      "id": 14,
-      "interval": null,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "value"
-      },
-      "pluginVersion": "7.2.0",
-      "targets": [
-        {
-          "expr": "count(node_cpu_seconds_total{instance=~\"$node\", mode='system'})",
-          "format": "time_series",
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "A",
-          "step": 20
-        }
-      ],
-      "title": "CPU Cores",
-      "type": "stat"
-    },
-    {
-      "cacheTimeout": null,
-      "datasource": "${DS__VICTORIAMETRICS}",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "mappings": [
-            {
-              "$$hashKey": "object:193",
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
-            }
-          ],
-          "nullValueMode": "null",
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "rgba(245, 54, 54, 0.9)",
-                "value": null
-              },
-              {
-                "color": "rgba(237, 129, 40, 0.89)",
-                "value": 100000
-              },
-              {
-                "color": "rgba(50, 172, 45, 0.97)",
-                "value": 1000000
-              }
-            ]
-          },
-          "unit": "short"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 2,
-        "x": 15,
-        "y": 18
-      },
-      "id": 179,
-      "interval": null,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "7.2.0",
-      "targets": [
-        {
-          "expr": "avg(node_filesystem_files_free{instance=~\"$node\",mountpoint=\"$maxmount\",fstype=~\"ext.?|xfs\"})",
-          "format": "time_series",
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "A",
-          "step": 20
-        }
-      ],
-      "title": "Free inodes:$maxmount ",
-      "type": "stat"
-    },
-    {
-      "cacheTimeout": null,
-      "datasource": "${DS__VICTORIAMETRICS}",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "decimals": 0,
-          "mappings": [
-            {
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
-            }
-          ],
-          "nullValueMode": "null",
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "rgba(245, 54, 54, 0.9)",
-                "value": null
-              },
-              {
-                "color": "rgba(237, 129, 40, 0.89)",
-                "value": 2
-              },
-              {
-                "color": "rgba(50, 172, 45, 0.97)",
-                "value": 3
-              }
-            ]
-          },
-          "unit": "bytes"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 2,
-        "x": 0,
-        "y": 20
-      },
-      "id": 75,
-      "interval": null,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "7.2.0",
-      "targets": [
-        {
-          "expr": "sum(node_memory_MemTotal_bytes{instance=~\"$node\"})",
-          "format": "time_series",
-          "instant": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "{{instance}}",
-          "refId": "A",
-          "step": 20
-        }
-      ],
-      "title": "Total RAM",
-      "type": "stat"
-    },
-    {
-      "cacheTimeout": null,
-      "datasource": "${DS__VICTORIAMETRICS}",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "mappings": [
-            {
-              "$$hashKey": "object:271",
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
-            }
-          ],
-          "nullValueMode": "null",
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "rgba(245, 54, 54, 0.9)",
-                "value": null
-              },
-              {
-                "color": "rgba(237, 129, 40, 0.89)",
-                "value": 1024
-              },
-              {
-                "color": "rgba(50, 172, 45, 0.97)",
-                "value": 10000
-              }
-            ]
-          },
-          "unit": "locale"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 2,
-        "x": 15,
-        "y": 20
-      },
-      "id": 178,
-      "interval": null,
-      "links": [],
-      "maxDataPoints": 100,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "horizontal",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "7.2.0",
-      "targets": [
-        {
-          "expr": "avg(node_filefd_maximum{instance=~\"$node\"})",
-          "format": "time_series",
-          "instant": true,
-          "intervalFactor": 1,
-          "legendFormat": "",
-          "refId": "A",
-          "step": 20
-        }
-      ],
-      "title": "Total filefd",
-      "type": "stat"
     },
     {
       "aliasColors": {
@@ -2018,7 +1479,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "description": "",
       "fieldConfig": {
@@ -2060,7 +1521,8 @@
       "maxPerRow": 6,
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true
+        "alertThreshold": true,
+        "dataLinks": []
       },
       "percentage": false,
       "pluginVersion": "7.2.0",
@@ -2070,7 +1532,6 @@
       "repeat": null,
       "seriesOverrides": [
         {
-          "$$hashKey": "object:3051",
           "alias": "/.*Total/",
           "color": "#C4162A",
           "fill": 0
@@ -2143,7 +1604,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:11294",
           "decimals": 0,
           "format": "percent",
           "label": "",
@@ -2153,7 +1613,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:11295",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2182,7 +1641,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "fieldConfig": {
         "defaults": {
@@ -2222,7 +1681,8 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true
+        "alertThreshold": true,
+        "dataLinks": []
       },
       "percentage": false,
       "pluginVersion": "7.2.0",
@@ -2231,13 +1691,11 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:3234",
           "alias": "Total",
           "color": "#C4162A",
           "fill": 0
         },
         {
-          "$$hashKey": "object:3235",
           "alias": "Used%",
           "color": "rgb(0, 209, 255)",
           "lines": false,
@@ -2346,7 +1804,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:3130",
           "format": "bytes",
           "label": null,
           "logBase": 1,
@@ -2355,7 +1812,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:3131",
           "format": "percent",
           "label": "Utilization%",
           "logBase": 1,
@@ -2377,7 +1833,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "fieldConfig": {
         "defaults": {
@@ -2417,7 +1873,8 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true
+        "alertThreshold": true,
+        "dataLinks": []
       },
       "percentage": false,
       "pluginVersion": "7.2.0",
@@ -2426,7 +1883,6 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:3308",
           "alias": "/.*_transmit$/",
           "transform": "negative-Y"
         }
@@ -2474,7 +1930,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:3315",
           "format": "bps",
           "label": "transmit（-）/receive（+）",
           "logBase": 1,
@@ -2483,7 +1938,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:3316",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2506,7 +1960,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -2550,7 +2004,8 @@
       "maxPerRow": 6,
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true
+        "alertThreshold": true,
+        "dataLinks": []
       },
       "percentage": false,
       "pluginVersion": "7.2.0",
@@ -2560,7 +2015,6 @@
       "repeat": null,
       "seriesOverrides": [
         {
-          "$$hashKey": "object:3389",
           "alias": "/.*CPU cores/",
           "color": "#C4162A"
         }
@@ -2633,7 +2087,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:3396",
           "format": "short",
           "logBase": 1,
           "max": null,
@@ -2641,7 +2094,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:3397",
           "format": "short",
           "logBase": 1,
           "max": null,
@@ -2661,7 +2113,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "decimals": 2,
       "description": "Per second read / write bytes ",
       "fieldConfig": {
@@ -2701,7 +2153,8 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true
+        "alertThreshold": true,
+        "dataLinks": []
       },
       "percentage": false,
       "pluginVersion": "7.2.0",
@@ -2710,7 +2163,6 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:3474",
           "alias": "/.*_Read bytes$/",
           "transform": "negative-Y"
         }
@@ -2759,7 +2211,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:3481",
           "decimals": null,
           "format": "Bps",
           "label": "Bytes read (-) / write (+)",
@@ -2769,7 +2220,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:3482",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -2788,7 +2238,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
+      "datasource": "Prometheus",
       "decimals": 1,
       "description": "",
       "fieldConfig": {
@@ -2829,7 +2279,8 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "alertThreshold": true
+        "alertThreshold": true,
+        "dataLinks": []
       },
       "percentage": false,
       "pluginVersion": "7.2.0",
@@ -2838,7 +2289,6 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:3554",
           "alias": "/Inodes.*/",
           "yaxis": 2
         }
@@ -2884,7 +2334,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:3561",
           "decimals": null,
           "format": "percent",
           "label": "",
@@ -2894,7 +2343,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:3562",
           "decimals": 2,
           "format": "percentunit",
           "label": null,
@@ -2908,765 +2356,10 @@
         "align": false,
         "alignLevel": null
       }
-    },
-    {
-      "aliasColors": {
-        "vda_write": "#6ED0E0"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
-      "decimals": 2,
-      "description": "Read/write completions per second\n\nWrites completed: 每个磁盘分区每秒写完成次数\n\nIO now 每个磁盘分区每秒正在处理的输入/输出请求数",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "links": []
-        },
-        "overrides": []
-      },
-      "fill": 0,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 9,
-        "w": 8,
-        "x": 0,
-        "y": 38
-      },
-      "height": "300",
-      "hiddenSeries": false,
-      "id": 161,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "hideEmpty": true,
-        "hideZero": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.2.0",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:3711",
-          "alias": "/.*_Reads completed$/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "rate(node_disk_reads_completed_total{instance=~\"$node\"}[$interval])",
-          "format": "time_series",
-          "hide": false,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "{{device}}_Reads completed",
-          "refId": "A",
-          "step": 10
-        },
-        {
-          "expr": "rate(node_disk_writes_completed_total{instance=~\"$node\"}[$interval])",
-          "format": "time_series",
-          "hide": false,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "{{device}}_Writes completed",
-          "refId": "B",
-          "step": 10
-        },
-        {
-          "expr": "node_disk_io_now{instance=~\"$node\"}",
-          "format": "time_series",
-          "hide": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "{{device}}",
-          "refId": "C"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Disk IOps Completed（IOPS）",
-      "tooltip": {
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:3718",
-          "decimals": null,
-          "format": "iops",
-          "label": "IO read (-) / write (+)",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:3719",
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Idle - Waiting for something to happen": "#052B51",
-        "guest": "#9AC48A",
-        "idle": "#052B51",
-        "iowait": "#EAB839",
-        "irq": "#BF1B00",
-        "nice": "#C15C17",
-        "sdb_每秒I/O操作%": "#d683ce",
-        "softirq": "#E24D42",
-        "steal": "#FCE2DE",
-        "system": "#508642",
-        "user": "#5195CE",
-        "磁盘花费在I/O操作占比": "#ba43a9"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
-      "decimals": null,
-      "description": "The time spent on I/O in the natural time of each second.（wall-clock time）",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "links": []
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 9,
-        "w": 8,
-        "x": 8,
-        "y": 38
-      },
-      "hiddenSeries": false,
-      "id": 175,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "hideEmpty": true,
-        "hideZero": true,
-        "max": true,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "sideWidth": null,
-        "sort": null,
-        "sortDesc": null,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "maxPerRow": 6,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.2.0",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "rate(node_disk_io_time_seconds_total{instance=~\"$node\"}[$interval])",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "{{device}}_ IO time",
-          "refId": "C"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Time Spent Doing I/Os",
-      "tooltip": {
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:3796",
-          "decimals": null,
-          "format": "percentunit",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:3797",
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "vda": "#6ED0E0"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
-      "decimals": 2,
-      "description": "Time spent on each read/write operation",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "links": []
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 1,
-      "gridPos": {
-        "h": 9,
-        "w": 8,
-        "x": 16,
-        "y": 38
-      },
-      "height": "300",
-      "hiddenSeries": false,
-      "id": 160,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "hideEmpty": true,
-        "hideZero": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 2,
-      "links": [],
-      "nullPointMode": "null as zero",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.2.0",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4023",
-          "alias": "/,*_Read time$/",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "rate(node_disk_read_time_seconds_total{instance=~\"$node\"}[$interval]) / rate(node_disk_reads_completed_total{instance=~\"$node\"}[$interval])",
-          "format": "time_series",
-          "hide": false,
-          "instant": false,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "{{device}}_Read time",
-          "refId": "B"
-        },
-        {
-          "expr": "rate(node_disk_write_time_seconds_total{instance=~\"$node\"}[$interval]) / rate(node_disk_writes_completed_total{instance=~\"$node\"}[$interval])",
-          "format": "time_series",
-          "hide": false,
-          "instant": false,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "{{device}}_Write time",
-          "refId": "C"
-        },
-        {
-          "expr": "rate(node_disk_io_time_seconds_total{instance=~\"$node\"}[$interval])",
-          "format": "time_series",
-          "hide": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "{{device}}",
-          "refId": "A",
-          "step": 10
-        },
-        {
-          "expr": "rate(node_disk_io_time_weighted_seconds_total{instance=~\"$node\"}[$interval])",
-          "format": "time_series",
-          "hide": true,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "{{device}}_加权",
-          "refId": "D"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Disk R/W Time(Reference: less than 100ms)(beta)",
-      "tooltip": {
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4030",
-          "format": "s",
-          "label": "Time read (-) / write (+)",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4031",
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "192.168.200.241:9100_TCP_alloc": "semi-dark-blue",
-        "TCP": "#6ED0E0",
-        "TCP_alloc": "blue"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
-      "decimals": 2,
-      "description": "Sockets_used - Sockets currently in use\n\nCurrEstab - TCP connections for which the current state is either ESTABLISHED or CLOSE- WAIT\n\nTCP_alloc - Allocated sockets\n\nTCP_tw - Sockets wating close\n\nUDP_inuse - Udp sockets currently in use\n\nRetransSegs - TCP retransmission packets\n\nOutSegs - Number of packets sent by TCP\n\nInSegs - Number of packets received by TCP",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "links": []
-        },
-        "overrides": []
-      },
-      "fill": 0,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 8,
-        "w": 16,
-        "x": 0,
-        "y": 47
-      },
-      "height": "300",
-      "hiddenSeries": false,
-      "id": 158,
-      "interval": "",
-      "legend": {
-        "alignAsTable": true,
-        "avg": false,
-        "current": true,
-        "hideEmpty": true,
-        "hideZero": true,
-        "max": true,
-        "min": false,
-        "rightSide": true,
-        "show": true,
-        "sideWidth": null,
-        "sort": "current",
-        "sortDesc": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.2.0",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4103",
-          "alias": "/.*Sockets_used/",
-          "color": "#E02F44",
-          "lines": false,
-          "pointradius": 1,
-          "points": true,
-          "yaxis": 2
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "node_netstat_Tcp_CurrEstab{instance=~'$node'}",
-          "format": "time_series",
-          "hide": false,
-          "instant": false,
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "CurrEstab",
-          "refId": "A",
-          "step": 20
-        },
-        {
-          "expr": "node_sockstat_TCP_tw{instance=~'$node'}",
-          "format": "time_series",
-          "interval": "",
-          "intervalFactor": 1,
-          "legendFormat": "TCP_tw",
-          "refId": "D"
-        },
-        {
-          "expr": "node_sockstat_sockets_used{instance=~'$node'}",
-          "hide": false,
-          "interval": "30m",
-          "intervalFactor": 1,
-          "legendFormat": "Sockets_used",
-          "refId": "B"
-        },
-        {
-          "expr": "node_sockstat_UDP_inuse{instance=~'$node'}",
-          "interval": "",
-          "legendFormat": "UDP_inuse",
-          "refId": "C"
-        },
-        {
-          "expr": "node_sockstat_TCP_alloc{instance=~'$node'}",
-          "interval": "",
-          "legendFormat": "TCP_alloc",
-          "refId": "E"
-        },
-        {
-          "expr": "rate(node_netstat_Tcp_PassiveOpens{instance=~'$node'}[$interval])",
-          "hide": true,
-          "interval": "",
-          "legendFormat": "{{instance}}_Tcp_PassiveOpens",
-          "refId": "G"
-        },
-        {
-          "expr": "rate(node_netstat_Tcp_ActiveOpens{instance=~'$node'}[$interval])",
-          "hide": true,
-          "interval": "",
-          "legendFormat": "{{instance}}_Tcp_ActiveOpens",
-          "refId": "F"
-        },
-        {
-          "expr": "rate(node_netstat_Tcp_InSegs{instance=~'$node'}[$interval])",
-          "interval": "",
-          "legendFormat": "Tcp_InSegs",
-          "refId": "H"
-        },
-        {
-          "expr": "rate(node_netstat_Tcp_OutSegs{instance=~'$node'}[$interval])",
-          "interval": "",
-          "legendFormat": "Tcp_OutSegs",
-          "refId": "I"
-        },
-        {
-          "expr": "rate(node_netstat_Tcp_RetransSegs{instance=~'$node'}[$interval])",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "Tcp_RetransSegs",
-          "refId": "J"
-        },
-        {
-          "expr": "rate(node_netstat_TcpExt_ListenDrops{instance=~'$node'}[$interval])",
-          "hide": true,
-          "interval": "",
-          "legendFormat": "",
-          "refId": "K"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Network Sockstat",
-      "tooltip": {
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "transformations": [],
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4118",
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4119",
-          "format": "short",
-          "label": "Total_Sockets_used",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "filefd_192.168.200.241:9100": "super-light-green",
-        "switches_192.168.200.241:9100": "semi-dark-red",
-        "使用的文件描述符_10.118.72.128:9100": "red",
-        "每秒上下文切换次数_10.118.71.245:9100": "yellow",
-        "每秒上下文切换次数_10.118.72.128:9100": "yellow"
-      },
-      "bars": false,
-      "cacheTimeout": null,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "${DS__VICTORIAMETRICS}",
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "links": []
-        },
-        "overrides": []
-      },
-      "fill": 0,
-      "fillGradient": 1,
-      "gridPos": {
-        "h": 8,
-        "w": 8,
-        "x": 16,
-        "y": 47
-      },
-      "hiddenSeries": false,
-      "hideTimeOverride": false,
-      "id": 16,
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": true,
-        "max": false,
-        "min": false,
-        "rightSide": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 2,
-      "links": [],
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.2.0",
-      "pointradius": 1,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:4197",
-          "alias": "switches",
-          "color": "#FADE2A",
-          "lines": false,
-          "pointradius": 1,
-          "points": true,
-          "yaxis": 2
-        },
-        {
-          "$$hashKey": "object:4198",
-          "alias": "used filefd",
-          "color": "#F2495C"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "node_filefd_allocated{instance=~\"$node\"}",
-          "format": "time_series",
-          "instant": false,
-          "interval": "",
-          "intervalFactor": 5,
-          "legendFormat": "used filefd",
-          "refId": "B"
-        },
-        {
-          "expr": "rate(node_context_switches_total{instance=~\"$node\"}[$interval])",
-          "interval": "",
-          "intervalFactor": 5,
-          "legendFormat": "switches",
-          "refId": "A"
-        },
-        {
-          "expr": "  (node_filefd_allocated{instance=~\"$node\"}/node_filefd_maximum{instance=~\"$node\"}) *100",
-          "format": "time_series",
-          "hide": true,
-          "instant": false,
-          "interval": "",
-          "intervalFactor": 5,
-          "legendFormat": "使用的文件描述符占比_{{instance}}",
-          "refId": "C"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Open  File Descriptor(left)/Context switches(right)",
-      "tooltip": {
-        "shared": true,
-        "sort": 2,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:4219",
-          "format": "short",
-          "label": "used filefd",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:4220",
-          "format": "short",
-          "label": "context_switches",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
     }
   ],
   "refresh": "",
-  "schemaVersion": 26,
+  "schemaVersion": 20,
   "style": "dark",
   "tags": [
     "Prometheus",
@@ -3677,8 +2370,12 @@
     "list": [
       {
         "allValue": "",
-        "current": {},
-        "datasource": "${DS__VICTORIAMETRICS}",
+        "current": {
+          "isNone": true,
+          "text": "None",
+          "value": ""
+        },
+        "datasource": "Prometheus",
         "definition": "label_values(origin_prometheus)",
         "hide": 0,
         "includeAll": false,
@@ -3699,8 +2396,11 @@
       },
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS__VICTORIAMETRICS}",
+        "current": {
+          "text": "Nodes",
+          "value": "Nodes"
+        },
+        "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\"}, job)",
         "hide": 0,
         "includeAll": false,
@@ -3721,8 +2421,11 @@
       },
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS__VICTORIAMETRICS}",
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}, nodename)",
         "hide": 0,
         "includeAll": true,
@@ -3744,8 +2447,11 @@
       {
         "allFormat": "glob",
         "allValue": null,
-        "current": {},
-        "datasource": "${DS__VICTORIAMETRICS}",
+        "current": {
+          "text": "142.132.221.103",
+          "value": "142.132.221.103"
+        },
+        "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",nodename=~\"$hostname\"},instance)",
         "hide": 0,
         "includeAll": false,
@@ -3768,8 +2474,11 @@
       {
         "allFormat": "glob",
         "allValue": null,
-        "current": {},
-        "datasource": "${DS__VICTORIAMETRICS}",
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": "Prometheus",
         "definition": "label_values(node_network_info{origin_prometheus=~\"$origin_prometheus\",device!~'tap.*|veth.*|br.*|docker.*|virbr.*|lo.*|cni.*'},device)",
         "hide": 0,
         "includeAll": true,
@@ -3794,7 +2503,6 @@
         "auto_count": 100,
         "auto_min": "10s",
         "current": {
-          "selected": false,
           "text": "2m",
           "value": "2m"
         },
@@ -3846,8 +2554,11 @@
       },
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS__VICTORIAMETRICS}",
+        "current": {
+          "text": "/",
+          "value": "/"
+        },
+        "datasource": "Prometheus",
         "definition": "query_result(topk(1,sort_desc (max(node_filesystem_size_bytes{origin_prometheus=~\"$origin_prometheus\",instance=~'$node',fstype=~\"ext.?|xfs\",mountpoint!~\".*pods.*\"}) by (mountpoint))))",
         "hide": 2,
         "includeAll": false,
@@ -3868,8 +2579,11 @@
       },
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS__VICTORIAMETRICS}",
+        "current": {
+          "text": "RPC",
+          "value": "RPC"
+        },
+        "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",instance=~\"$node\"}, nodename)",
         "hide": 2,
         "includeAll": false,
@@ -3890,8 +2604,11 @@
       },
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS__VICTORIAMETRICS}",
+        "current": {
+          "text": "2",
+          "value": "2"
+        },
+        "datasource": "Prometheus",
         "definition": "query_result(count(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}))",
         "hide": 2,
         "includeAll": false,
@@ -3940,7 +2657,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Node Exporter Dashboard EN 20201010-StarsL.cn",
+  "title": "Node Exporter Dashboard",
   "uid": "xfpJB9FGz",
-  "version": 2
+  "version": 3
 }
