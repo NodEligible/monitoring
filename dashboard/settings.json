@@ -16,8 +16,7 @@
   "editable": true,
   "gnetId": 11074,
   "graphTooltip": 0,
-  "id": 3,
-  "iteration": 1731194361973,
+  "iteration": 1732203523612,
   "links": [
     {
       "icon": "bolt",
@@ -73,7 +72,7 @@
       },
       "fontSize": "80%",
       "gridPos": {
-        "h": 7,
+        "h": 16,
         "w": 24,
         "x": 0,
         "y": 1
@@ -395,14 +394,6 @@
       ],
       "targets": [
         {
-          "expr": "node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"} - 0",
-          "format": "table",
-          "instant": true,
-          "interval": "",
-          "legendFormat": "主机名",
-          "refId": "A"
-        },
-        {
           "expr": "sum(time() - node_boot_time_seconds{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"})by(instance)",
           "format": "table",
           "hide": false,
@@ -428,14 +419,6 @@
           "interval": "",
           "legendFormat": "总核数",
           "refId": "C"
-        },
-        {
-          "expr": "node_load5{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}",
-          "format": "table",
-          "instant": true,
-          "interval": "",
-          "legendFormat": "5分钟负载",
-          "refId": "L"
         },
         {
           "expr": "(1 - avg(rate(node_cpu_seconds_total{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",mode=\"idle\"}[$interval])) by (instance)) * 100",
@@ -465,15 +448,6 @@
           "refId": "E"
         },
         {
-          "expr": "max(rate(node_disk_read_bytes_total{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}[$interval])) by (instance)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "legendFormat": "最大读取",
-          "refId": "H"
-        },
-        {
           "expr": "max(rate(node_disk_written_bytes_total{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}[$interval])) by (instance)",
           "format": "table",
           "hide": false,
@@ -481,24 +455,6 @@
           "interval": "",
           "legendFormat": "最大写入",
           "refId": "I"
-        },
-        {
-          "expr": "node_netstat_Tcp_CurrEstab{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"} - 0",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "legendFormat": "连接数",
-          "refId": "M"
-        },
-        {
-          "expr": "node_sockstat_TCP_tw{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"} - 0",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "interval": "",
-          "legendFormat": "TIME_WAIT",
-          "refId": "N"
         },
         {
           "expr": "max(rate(node_network_receive_bytes_total{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}[$interval])*8) by (instance)",
@@ -560,7 +516,7 @@
         "h": 7,
         "w": 8,
         "x": 0,
-        "y": 8
+        "y": 17
       },
       "hiddenSeries": false,
       "id": 191,
@@ -716,7 +672,7 @@
         "h": 7,
         "w": 8,
         "x": 8,
-        "y": 8
+        "y": 17
       },
       "height": "300",
       "hiddenSeries": false,
@@ -860,7 +816,7 @@
         "h": 7,
         "w": 8,
         "x": 16,
-        "y": 8
+        "y": 17
       },
       "hiddenSeries": false,
       "id": 197,
@@ -988,7 +944,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 15
+        "y": 24
       },
       "id": 189,
       "panels": [],
@@ -1042,7 +998,7 @@
         "h": 6,
         "w": 7,
         "x": 0,
-        "y": 16
+        "y": 25
       },
       "id": 177,
       "options": {
@@ -1140,7 +1096,7 @@
         "h": 6,
         "w": 10,
         "x": 7,
-        "y": 16
+        "y": 25
       },
       "id": 181,
       "links": [
@@ -1357,7 +1313,7 @@
         "h": 6,
         "w": 7,
         "x": 17,
-        "y": 16
+        "y": 25
       },
       "hiddenSeries": false,
       "id": 183,
@@ -1495,7 +1451,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 22
+        "y": 31
       },
       "hiddenSeries": false,
       "id": 7,
@@ -1656,7 +1612,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 22
+        "y": 31
       },
       "height": "300",
       "hiddenSeries": false,
@@ -1848,7 +1804,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 22
+        "y": 31
       },
       "height": "300",
       "hiddenSeries": false,
@@ -1978,7 +1934,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 30
+        "y": 39
       },
       "height": "300",
       "hiddenSeries": false,
@@ -2129,7 +2085,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 30
+        "y": 39
       },
       "height": "300",
       "hiddenSeries": false,
@@ -2254,7 +2210,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 30
+        "y": 39
       },
       "hiddenSeries": false,
       "id": 174,
@@ -2397,8 +2353,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "Nodes",
-          "value": "Nodes"
+          "text": "jenodes",
+          "value": "jenodes"
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\"}, job)",
@@ -2448,8 +2404,8 @@
         "allFormat": "glob",
         "allValue": null,
         "current": {
-          "text": "142.132.221.103",
-          "value": "142.132.221.103"
+          "text": "3_s",
+          "value": "3_s"
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",nodename=~\"$hostname\"},instance)",
@@ -2580,8 +2536,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "RPC",
-          "value": "RPC"
+          "text": "vmi1163046.contaboserver.net",
+          "value": "vmi1163046.contaboserver.net"
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",instance=~\"$node\"}, nodename)",
@@ -2605,8 +2561,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "2",
-          "value": "2"
+          "text": "1",
+          "value": "1"
         },
         "datasource": "Prometheus",
         "definition": "query_result(count(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}))",
@@ -2659,5 +2615,5 @@
   "timezone": "browser",
   "title": "Node Exporter Dashboard",
   "uid": "xfpJB9FGz",
-  "version": 3
+  "version": 1
 }
