@@ -16,7 +16,7 @@
   "editable": true,
   "gnetId": 11074,
   "graphTooltip": 0,
-  "iteration": 1732203523612,
+  "iteration": 1732204122840,
   "links": [
     {
       "icon": "bolt",
@@ -2314,7 +2314,7 @@
       }
     }
   ],
-  "refresh": "",
+  "refresh": "15s",
   "schemaVersion": 20,
   "style": "dark",
   "tags": [
@@ -2328,6 +2328,7 @@
         "allValue": "",
         "current": {
           "isNone": true,
+          "selected": true,
           "text": "None",
           "value": ""
         },
@@ -2353,6 +2354,8 @@
       {
         "allValue": null,
         "current": {
+          "selected": false,
+          "tags": [],
           "text": "jenodes",
           "value": "jenodes"
         },
@@ -2405,7 +2408,9 @@
         "allValue": null,
         "current": {
           "text": "3_s",
-          "value": "3_s"
+          "value": [
+            "3_s"
+          ]
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",nodename=~\"$hostname\"},instance)",
@@ -2432,7 +2437,9 @@
         "allValue": null,
         "current": {
           "text": "All",
-          "value": "$__all"
+          "value": [
+            "$__all"
+          ]
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_network_info{origin_prometheus=~\"$origin_prometheus\",device!~'tap.*|veth.*|br.*|docker.*|virbr.*|lo.*|cni.*'},device)",
@@ -2561,8 +2568,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "1",
-          "value": "1"
+          "text": "4",
+          "value": "4"
         },
         "datasource": "Prometheus",
         "definition": "query_result(count(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}))",
@@ -2586,7 +2593,7 @@
     ]
   },
   "time": {
-    "from": "now-12h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
