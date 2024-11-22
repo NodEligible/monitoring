@@ -14,7 +14,6 @@ PROMETHEUS_IP=$(hostname -I | awk '{print $1}')
 PROMETHEUS_URL="http://${PROMETHEUS_IP}:19980"
 
 echo -e "${YELLOW}Автоматически определен IP-адрес сервера: ${PROMETHEUS_IP}${NC}"
-echo -e "${YELLOW}Prometheus URL: ${PROMETHEUS_URL}${NC}"
 
 echo -e "${YELLOW}Открываем порт 19980${NC}"
 sudo ufw allow 19980/tcp
