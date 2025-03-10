@@ -50,5 +50,5 @@ sudo systemctl daemon-reload
 sudo systemctl enable multiple-healthcheck
 sudo systemctl start multiple-healthcheck
 
-echo "Installation complete! Multiple Health Check is now running."
+echo -e "${GREEN}Установка завершена!${NC}"
 
