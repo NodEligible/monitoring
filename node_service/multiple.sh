@@ -93,8 +93,8 @@ EOF
 
 # Запуск сервиса
 echo -e "${YELLOW}🚀 Запускаем сервис multiple-healthcheck...${NC}"
-sudo systemctl daemon-reload
 sudo systemctl enable multiple-healthcheck
+sudo systemctl daemon-reload
 sudo systemctl start multiple-healthcheck
 
 echo -e "${GREEN}✅ Установка завершена! Сервис запущен.${NC}"
