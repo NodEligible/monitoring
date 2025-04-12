@@ -91,13 +91,13 @@ StandardError=append:/root/waku_service/service.log
 WantedBy=multi-user.target
 EOF
 
-# Оновлення systemd
-echo -e "${YELLOW}🔄 Обновление systemd...${NC}"
-systemctl daemon-reload
-
 # Додавання в автозапуск
 echo -e "${YELLOW}🔧 Включение сервиса...${NC}"
 systemctl enable "$SERVICE_NAME.service"
+
+# Оновлення systemd
+echo -e "${YELLOW}🔄 Обновление systemd...${NC}"
+systemctl daemon-reload
 
 # Запуск сервісу
 echo -e "${YELLOW}🚀 Запуск сервиса...${NC}"
