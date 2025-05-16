@@ -5,6 +5,7 @@ curl -s https://raw.githubusercontent.com/NodEligible/programs/refs/heads/main/d
 YELLOW='\e[0;33m'
 GREEN='\033[0;32m'
 RED='\033[0;31m'
+BLUE='\033[38;5;81m'
 NC='\033[0m'
 
 # Шлях для встановлення
@@ -38,6 +39,7 @@ cat <<EOF > "$INSTALL_DIR/monitor.sh"
 YELLOW='\e[0;33m'
 GREEN='\033[0;32m'
 RED='\033[0;31m'
+BLUE='\033[38;5;81m'
 NC='\033[0m'
 
 # Лог-файл
@@ -60,7 +62,7 @@ while true; do
     echo -e "\$(/usr/bin/date '+%Y-%m-%d %H:%M:%S') ⏳ ${YELLOW} Перезапускаем все контейнеры...${NC}" | tee -a "$LOG_FILE"   
     sleep 40
     docker compose -f "$COMPOSE_FILE" up -d
-    echo -e "\$(/usr/bin/date '+%Y-%m-%d %H:%M:%S') 🔎 ${YELLOW} Контейнеры${NC} Ritual ${YELLOW}подняты, следующая проверка через 10 минут.${NC}" | tee -a "$LOG_FILE"
+    echo -e "\$(/usr/bin/date '+%Y-%m-%d %H:%M:%S') 🔎 ${BLUE} Контейнеры${NC} Ritual ${BLUE}подняты, следующая проверка через 10 минут.${NC}" | tee -a "$LOG_FILE"
     else
         echo -e "\$(/usr/bin/date '+%Y-%m-%d %H:%M:%S') ✅ ${GREEN} Все контейнеры${NC} Ritual ${GREEN}работают корректно.${NC}" | tee -a "$LOG_FILE"
     fi
