@@ -44,7 +44,7 @@ NC='\033[0m'
 LOG_FILE="$HOME/ritual_service/monitor.log"
 
 # Масив контейнерів, які потрібно моніторити
-containers=("infernet-node" "deploy-fluentbit-1" "deploy-redis-1" "hello-world")
+containers=("infernet-node" "deploy-fluentbit-1" "deploy-redis-1")
 
 while true; do
     restart_needed=false
