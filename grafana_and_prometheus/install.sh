@@ -135,5 +135,5 @@ sudo systemctl start grafana-server
 rm -rf grafana_6.4.3_amd64.deb
 
 echo -e "${GREEN}Grafana успешно установлена!${NC}"
-echo -e "${YELLOW}Grafana доступна по адресу: http://${PROMETHEUS_IP}:3000 Login:admin  Password:admin${NC}"
+echo -e "${YELLOW}Grafana доступна по адресу: http://${PROMETHEUS_IP}:3000 Login:${NC}admin  ${YELLOW}Password:${NC}admin"
 echo -e "${YELLOW}Prometheus доступен по адресу: http://${PROMETHEUS_IP}:19980/targets?search=${NC}"
