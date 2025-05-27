@@ -1,8 +1,7 @@
 #!/bin/bash
-#--------------------------------------------------------------------
-# Script to Install Prometheus Node_Exporter on Linux
-#--------------------------------------------------------------------
-# https://github.com/prometheus/node_exporter/releases
+
+curl -s https://raw.githubusercontent.com/NodEligible/programs/refs/heads/main/display_logo.sh | bash
+
 NODE_EXPORTER_VERSION="1.7.0"
 
 sudo ufw allow 9100/tcp
