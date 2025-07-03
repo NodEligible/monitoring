@@ -6,6 +6,14 @@ RED='\033[0;31m'
 BLUE='\033[38;5;81m'
 NC='\033[0m'
 
+
+echo -e "${YELLOW} Удаляем сервис если есть...${NC}"
+sudo systemctl stop gaianet-monitor
+sudo systemctl disable gaianet-monitor
+systemctl daemon-reload
+rm -f /root/gaianet_service
+rm -f /etc/systemd/system/gaianet-monitor.service
+
 INSTALL_DIR="/root/gaianet_service"
 SERVICE_NAME="gaianet-monitor"
 LOG_FILE="$INSTALL_DIR/monitor.log"
