@@ -39,14 +39,14 @@ while true; do
 
     if [ "\$restart_needed" = true ]; then
         echo -e "\$(date '+%Y-%m-%d %H:%M:%S') 🔁 \${BLUE}Перезапуск GaiaNet...${NC}" | tee -a "\$LOG_FILE"
-        gaianet stop >> "\$LOG_FILE" 2>&1
+        /root/gaianet/bin/gaianet stop >> "\$LOG_FILE" 2>&1
         sleep 20
-        gaianet start >> "\$LOG_FILE" 2>&1
+        /root/gaianet/bin/gaianet start >> "\$LOG_FILE" 2>&1
         echo -e "\$(date '+%Y-%m-%d %H:%M:%S') ✅ \${GREEN}GaiaNet перезапущен.${NC}" | tee -a "\$LOG_FILE"
     else
         echo -e "\$(date '+%Y-%m-%d %H:%M:%S') ✅ \${GREEN}Все процессы GaiaNet работают.${NC}" | tee -a "\$LOG_FILE"
     fi
-    sleep 5m
+    sleep 3m
 done
 EOF
 
