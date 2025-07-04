@@ -49,7 +49,7 @@ while true; do
         /root/gaianet/bin/gaianet stop >> "\$LOG_FILE" 2>&1
         sleep 20
         /root/gaianet/bin/gaianet start >> "\$LOG_FILE" 2>&1
-        echo -e "\$(date '+%Y-%m-%d %H:%M:%S') ✅ \${GREEN}GaiaNet перезапущен.${NC}" | tee -a "\$LOG_FILE"
+        echo -e "\$(date '+%Y-%m-%d %H:%M:%S') ✅ \${YELLOW}GaiaNet перезапущен.${NC}" | tee -a "\$LOG_FILE"
     else
         echo -e "\$(date '+%Y-%m-%d %H:%M:%S') ✅ \${GREEN}Все процессы GaiaNet работают.${NC}" | tee -a "\$LOG_FILE"
     fi
