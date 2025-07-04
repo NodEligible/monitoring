@@ -53,7 +53,7 @@ while true; do
     else
         echo -e "\$(date '+%Y-%m-%d %H:%M:%S') ✅ \${GREEN}Все процессы GaiaNet работают.${NC}" | tee -a "\$LOG_FILE"
     fi
-    sleep 3m
+    sleep 1h
 done
 EOF
 
