@@ -6,7 +6,6 @@ RED='\033[0;31m'
 BLUE='\033[38;5;81m'
 NC='\033[0m'
 
-
 echo -e "${YELLOW} Удаляем сервис если есть...${NC}"
 sudo systemctl stop gaianet-monitor &>/dev/null
 sudo systemctl disable gaianet-monitor &>/dev/null
