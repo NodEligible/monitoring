@@ -11,8 +11,8 @@ echo -e "${YELLOW} Удаляем сервис если есть...${NC}"
 sudo systemctl stop gaianet-monitor
 sudo systemctl disable gaianet-monitor
 systemctl daemon-reload
-rm -f /root/gaianet_service
-rm -f /etc/systemd/system/gaianet-monitor.service
+rm -rf /root/gaianet_service
+rm -rf /etc/systemd/system/gaianet-monitor.service
 
 INSTALL_DIR="/root/gaianet_service"
 SERVICE_NAME="gaianet-monitor"
