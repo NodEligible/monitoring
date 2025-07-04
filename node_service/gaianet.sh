@@ -8,11 +8,11 @@ NC='\033[0m'
 
 
 echo -e "${YELLOW} Удаляем сервис если есть...${NC}"
-sudo systemctl stop gaianet-monitor
-sudo systemctl disable gaianet-monitor
-systemctl daemon-reload
-rm -rf /root/gaianet_service
-rm -rf /etc/systemd/system/gaianet-monitor.service
+sudo systemctl stop gaianet-monitor &>/dev/null
+sudo systemctl disable gaianet-monitor &>/dev/null
+systemctl daemon-reload 
+rm -rf /root/gaianet_service &>/dev/null
+rm -rf /etc/systemd/system/gaianet-monitor.service &>/dev/null
 
 INSTALL_DIR="/root/gaianet_service"
 SERVICE_NAME="gaianet-monitor"
