@@ -28,15 +28,6 @@
       "url": "https://grafana.com/grafana/dashboards/11074"
     },
     {
-      "icon": "question",
-      "tags": [],
-      "targetBlank": true,
-      "title": "GitHub",
-      "tooltip": "more dashboard",
-      "type": "link",
-      "url": "https://github.com/starsliao"
-    },
-    {
       "asDropdown": true,
       "icon": "external link",
       "tags": [],
@@ -57,7 +48,7 @@
       },
       "id": 187,
       "panels": [],
-      "title": "Resource Overview (associated JOB)，Host：$show_hostname，Instance：$node",
+      "title": "Resource Overview (associated JOB)\uff0cHost\uff1a$show_hostname\uff0cInstance\uff1a$node",
       "type": "row"
     },
     {
@@ -107,7 +98,7 @@
           "unit": "bytes"
         },
         {
-          "alias": "IP（Link to details）",
+          "alias": "IP\uff08Link to details\uff09",
           "align": "auto",
           "colorMode": null,
           "colors": [
@@ -399,7 +390,7 @@
           "hide": false,
           "instant": true,
           "interval": "",
-          "legendFormat": "运行时间",
+          "legendFormat": "\u8fd0\u884c\u65f6\u95f4",
           "refId": "D"
         },
         {
@@ -408,7 +399,7 @@
           "hide": false,
           "instant": true,
           "interval": "",
-          "legendFormat": "总内存",
+          "legendFormat": "\u603b\u5185\u5b58",
           "refId": "B"
         },
         {
@@ -417,7 +408,7 @@
           "hide": false,
           "instant": true,
           "interval": "",
-          "legendFormat": "总核数",
+          "legendFormat": "\u603b\u6838\u6570",
           "refId": "C"
         },
         {
@@ -426,7 +417,7 @@
           "hide": false,
           "instant": true,
           "interval": "",
-          "legendFormat": "CPU使用率",
+          "legendFormat": "CPU\u4f7f\u7528\u7387",
           "refId": "F"
         },
         {
@@ -435,7 +426,7 @@
           "hide": false,
           "instant": true,
           "interval": "",
-          "legendFormat": "内存使用率",
+          "legendFormat": "\u5185\u5b58\u4f7f\u7528\u7387",
           "refId": "G"
         },
         {
@@ -444,7 +435,7 @@
           "hide": false,
           "instant": true,
           "interval": "",
-          "legendFormat": "分区使用率",
+          "legendFormat": "\u5206\u533a\u4f7f\u7528\u7387",
           "refId": "E"
         },
         {
@@ -453,7 +444,7 @@
           "hide": false,
           "instant": true,
           "interval": "",
-          "legendFormat": "最大写入",
+          "legendFormat": "\u6700\u5927\u5199\u5165",
           "refId": "I"
         },
         {
@@ -462,7 +453,7 @@
           "hide": false,
           "instant": true,
           "interval": "",
-          "legendFormat": "下载带宽",
+          "legendFormat": "\u4e0b\u8f7d\u5e26\u5bbd",
           "refId": "J"
         },
         {
@@ -471,32 +462,18 @@
           "hide": false,
           "instant": true,
           "interval": "",
-          "legendFormat": "上传带宽",
+          "legendFormat": "\u4e0a\u4f20\u5e26\u5bbd",
           "refId": "K"
         }
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Server Resource Overview【JOB：$job，Total：$total】",
+      "title": "Server Resource Overview\u3010JOB\uff1a$job\uff0cTotal\uff1a$total\u3011",
       "transform": "table",
       "type": "table"
     },
     {
-      "aliasColors": {
-        "192.168.200.241:9100_Total": "dark-red",
-        "Idle - Waiting for something to happen": "#052B51",
-        "guest": "#9AC48A",
-        "idle": "#052B51",
-        "iowait": "#EAB839",
-        "irq": "#BF1B00",
-        "nice": "#C15C17",
-        "sdb_每秒I/O操作%": "#d683ce",
-        "softirq": "#E24D42",
-        "steal": "#FCE2DE",
-        "system": "#508642",
-        "user": "#5195CE",
-        "磁盘花费在I/O操作占比": "#ba43a9"
-      },
+      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -604,7 +581,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "$job：Overall total 5m load & average CPU used%",
+      "title": "$job\uff1aOverall total 5m load & average CPU used%",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -644,16 +621,7 @@
       }
     },
     {
-      "aliasColors": {
-        "192.168.200.241:9100_总内存": "dark-red",
-        "内存_Avaliable": "#6ED0E0",
-        "内存_Cached": "#EF843C",
-        "内存_Free": "#629E51",
-        "内存_Total": "#6d1f62",
-        "内存_Used": "#eab839",
-        "可用": "#9ac48a",
-        "总内存": "#bf1b00"
-      },
+      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -756,7 +724,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "$job：Overall total memory & average memory used%",
+      "title": "$job\uff1aOverall total memory & average memory used%",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -898,7 +866,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "$job：Overall total disk & average disk used%",
+      "title": "$job\uff1aOverall total disk & average disk used%",
       "tooltip": {
         "shared": true,
         "sort": 2,
@@ -948,7 +916,7 @@
       },
       "id": 189,
       "panels": [],
-      "title": "Resource Details：【$show_hostname】",
+      "title": "Resource Details\uff1a\u3010$show_hostname\u3011",
       "type": "row"
     },
     {
@@ -1049,7 +1017,7 @@
           "hide": true,
           "instant": true,
           "interval": "",
-          "legendFormat": "IOwait使用率",
+          "legendFormat": "IOwait\u4f7f\u7528\u7387",
           "refId": "C"
         },
         {
@@ -1256,7 +1224,7 @@
           "instant": true,
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "总量",
+          "legendFormat": "\u603b\u91cf",
           "refId": "C"
         },
         {
@@ -1280,19 +1248,12 @@
           "refId": "B"
         }
       ],
-      "title": "【$show_hostname】：Disk Space Used Basic(EXT?/XFS)",
+      "title": "\u3010$show_hostname\u3011\uff1aDisk Space Used Basic(EXT?/XFS)",
       "transform": "table",
       "type": "table"
     },
     {
-      "aliasColors": {
-        "cn-shenzhen.i-wz9cq1dcb6zwc39ehw59_cni0_in": "light-red",
-        "cn-shenzhen.i-wz9cq1dcb6zwc39ehw59_cni0_in下载": "green",
-        "cn-shenzhen.i-wz9cq1dcb6zwc39ehw59_cni0_out上传": "yellow",
-        "cn-shenzhen.i-wz9cq1dcb6zwc39ehw59_eth0_in下载": "purple",
-        "cn-shenzhen.i-wz9cq1dcb6zwc39ehw59_eth0_out": "purple",
-        "cn-shenzhen.i-wz9cq1dcb6zwc39ehw59_eth0_out上传": "blue"
-      },
+      "aliasColors": {},
       "bars": true,
       "dashLength": 10,
       "dashes": false,
@@ -1397,7 +1358,7 @@
       "yaxes": [
         {
           "format": "bytes",
-          "label": "transmit（-）/receive（+）",
+          "label": "transmit\uff08-\uff09/receive\uff08+\uff09",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -1417,21 +1378,7 @@
       }
     },
     {
-      "aliasColors": {
-        "192.168.200.241:9100_Total": "dark-red",
-        "Idle - Waiting for something to happen": "#052B51",
-        "guest": "#9AC48A",
-        "idle": "#052B51",
-        "iowait": "#EAB839",
-        "irq": "#BF1B00",
-        "nice": "#C15C17",
-        "sdb_每秒I/O操作%": "#d683ce",
-        "softirq": "#E24D42",
-        "steal": "#FCE2DE",
-        "system": "#508642",
-        "user": "#5195CE",
-        "磁盘花费在I/O操作占比": "#ba43a9"
-      },
+      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -1583,17 +1530,7 @@
       }
     },
     {
-      "aliasColors": {
-        "192.168.200.241:9100_总内存": "dark-red",
-        "使用率": "yellow",
-        "内存_Avaliable": "#6ED0E0",
-        "内存_Cached": "#EF843C",
-        "内存_Free": "#629E51",
-        "内存_Total": "#6d1f62",
-        "内存_Used": "#eab839",
-        "可用": "#9ac48a",
-        "总内存": "#bf1b00"
-      },
+      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -1701,7 +1638,7 @@
           "hide": true,
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "内存_Buffers",
+          "legendFormat": "\u5185\u5b58_Buffers",
           "refId": "D",
           "step": 4
         },
@@ -1710,7 +1647,7 @@
           "format": "time_series",
           "hide": true,
           "intervalFactor": 1,
-          "legendFormat": "内存_Free",
+          "legendFormat": "\u5185\u5b58_Free",
           "refId": "C",
           "step": 4
         },
@@ -1719,7 +1656,7 @@
           "format": "time_series",
           "hide": true,
           "intervalFactor": 1,
-          "legendFormat": "内存_Cached",
+          "legendFormat": "\u5185\u5b58_Cached",
           "refId": "E",
           "step": 4
         },
@@ -1782,10 +1719,7 @@
       }
     },
     {
-      "aliasColors": {
-        "192.168.10.227:9100_em1_in下载": "super-light-green",
-        "192.168.10.227:9100_em1_out上传": "dark-blue"
-      },
+      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -1887,7 +1821,7 @@
       "yaxes": [
         {
           "format": "bps",
-          "label": "transmit（-）/receive（+）",
+          "label": "transmit\uff08-\uff09/receive\uff08+\uff09",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -1908,11 +1842,7 @@
       }
     },
     {
-      "aliasColors": {
-        "15分钟": "#6ED0E0",
-        "1分钟": "#BF1B00",
-        "5分钟": "#CCA300"
-      },
+      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -2063,9 +1993,7 @@
       }
     },
     {
-      "aliasColors": {
-        "vda_write": "#6ED0E0"
-      },
+      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -2266,7 +2194,7 @@
           "expr": "node_filesystem_files_free{instance=~'$node',fstype=~\"ext.?|xfs\"} / node_filesystem_files{instance=~'$node',fstype=~\"ext.?|xfs\"}",
           "hide": true,
           "interval": "",
-          "legendFormat": "Inodes：{{instance}}：{{mountpoint}}",
+          "legendFormat": "Inodes\uff1a{{instance}}\uff1a{{mountpoint}}",
           "refId": "B"
         }
       ],
@@ -2319,16 +2247,14 @@
   "style": "dark",
   "tags": [
     "Prometheus",
-    "node_exporter",
-    "StarsL.cn"
+    "node_exporter"
   ],
   "templating": {
     "list": [
       {
         "allValue": "",
         "current": {
-          "isNone": true,
-          "selected": true,
+          "selected": false,
           "text": "None",
           "value": ""
         },
@@ -2355,9 +2281,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "tags": [],
-          "text": "jenodes",
-          "value": "jenodes"
+          "text": "None",
+          "value": ""
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\"}, job)",
@@ -2381,8 +2306,9 @@
       {
         "allValue": null,
         "current": {
-          "text": "All",
-          "value": "$__all"
+          "selected": false,
+          "text": "None",
+          "value": ""
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}, nodename)",
@@ -2407,10 +2333,9 @@
         "allFormat": "glob",
         "allValue": null,
         "current": {
-          "text": "3_s",
-          "value": [
-            "3_s"
-          ]
+          "selected": false,
+          "text": "None",
+          "value": ""
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",nodename=~\"$hostname\"},instance)",
@@ -2436,10 +2361,9 @@
         "allFormat": "glob",
         "allValue": null,
         "current": {
-          "text": "All",
-          "value": [
-            "$__all"
-          ]
+          "selected": false,
+          "text": "None",
+          "value": ""
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_network_info{origin_prometheus=~\"$origin_prometheus\",device!~'tap.*|veth.*|br.*|docker.*|virbr.*|lo.*|cni.*'},device)",
@@ -2466,8 +2390,9 @@
         "auto_count": 100,
         "auto_min": "10s",
         "current": {
-          "text": "2m",
-          "value": "2m"
+          "selected": false,
+          "text": "None",
+          "value": ""
         },
         "hide": 0,
         "label": "Interval",
@@ -2518,8 +2443,9 @@
       {
         "allValue": null,
         "current": {
-          "text": "/",
-          "value": "/"
+          "selected": false,
+          "text": "None",
+          "value": ""
         },
         "datasource": "Prometheus",
         "definition": "query_result(topk(1,sort_desc (max(node_filesystem_size_bytes{origin_prometheus=~\"$origin_prometheus\",instance=~'$node',fstype=~\"ext.?|xfs\",mountpoint!~\".*pods.*\"}) by (mountpoint))))",
@@ -2543,8 +2469,9 @@
       {
         "allValue": null,
         "current": {
-          "text": "vmi1163046.contaboserver.net",
-          "value": "vmi1163046.contaboserver.net"
+          "selected": false,
+          "text": "None",
+          "value": ""
         },
         "datasource": "Prometheus",
         "definition": "label_values(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\",instance=~\"$node\"}, nodename)",
@@ -2568,8 +2495,9 @@
       {
         "allValue": null,
         "current": {
-          "text": "4",
-          "value": "4"
+          "selected": false,
+          "text": "None",
+          "value": ""
         },
         "datasource": "Prometheus",
         "definition": "query_result(count(node_uname_info{origin_prometheus=~\"$origin_prometheus\",job=~\"$job\"}))",
